@@ -1,0 +1,27 @@
+@import "./fonts/fonts";
+
+.app {
+  overflow: hidden;
+  box-sizing: border-box;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.22) 7.62%,
+      rgba(235, 125, 20, 0.1) 25.5%,
+      rgba(255, 255, 255, 0.1) 70.92%
+    ),
+    #fafafa;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    font-family: 'Petrov Sans-Trial';
+  }
+
+}

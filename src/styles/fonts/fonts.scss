@@ -1,0 +1,29 @@
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: 'Petrov Sans-Trial';
+
+  font-display: swap;
+  src: url('../fonts/PetrovSans-Trial-Bold.woff2') format('woff2'),
+    url('../fonts/PetrovSans-Trial-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Petrov Sans-Trial';
+
+  font-display: swap;
+  src: url('../fonts/PetrovSans-Trial-Regular.woff2') format('woff2'),
+    url('../fonts/PetrovSans-Trial-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: 'Petrov Sans-Trial';
+
+  font-display: swap;
+  src: url('../fonts/PetrovSans-Trial-SemiBold.woff2') format('woff2'),
+    url('../fonts/PetrovSans-Trial-SemiBold.woff') format('woff');
+}

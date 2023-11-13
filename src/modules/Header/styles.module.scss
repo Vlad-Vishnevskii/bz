@@ -1,0 +1,20 @@
+@import "../../variables.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 42px 70px;
+  overflow: hidden;
+
+  @include vp-1439 {
+    width: 100%;
+    padding: 30px 40px;
+    justify-content: space-between;
+  }
+
+  &_logo {
+    margin-right: 50px;
+  }
+}

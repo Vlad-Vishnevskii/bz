@@ -1,0 +1,59 @@
+@import '../../variables.scss';
+
+.main {
+  position: relative;
+  min-height: 600px;
+
+  &_container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &_bg {
+    position: absolute;
+    top: -80px;
+    right: 50px;
+  }
+}
+
+.swiper {
+  padding-bottom: 100px !important;
+
+  :global(.swiper-pagination-bullet) {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    color: #9b9b9b;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    background: transparent;
+    opacity: 1;
+    transition: $trans-default;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #9b9b9b;
+      border-radius: 50%;
+      transition: $trans-default;
+    }
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    color: #eb7d14;
+
+    &::after {
+      width: 16px;
+      height: 16px;
+      background: #eb7d14;
+    }
+  }
+}
