@@ -1,0 +1,118 @@
+@import '../../../../variables.scss';
+
+.localeSwitcherDesktop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #eb7d14;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  cursor: pointer;
+  min-width: 56px;
+
+  &:hover {
+    color: #d66800;
+  }
+
+  @include vp-1439 {
+    display: none;
+  }
+
+  &_icon {
+    svg {
+      transition: $trans-default;
+    }
+
+    &_open {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &_options {
+    display: none;
+    position: absolute;
+    bottom: -50px;
+    left: -10px;
+    transition: $trans-default;
+
+    &_open {
+      display: block;
+    }
+  }
+
+  &_optionsItem {
+    display: flex;
+    width: 66px;
+    height: 41px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #eb7d14;
+    color: #ffffff;
+  }
+}
+
+.localeSwitcherMobile {
+  display: none;
+
+  @include vp-1439 {
+    display: block;
+    position: absolute;
+    left: 22px;
+    bottom: 57px;
+  }
+
+  @include vp-767 {
+    bottom: 36px;
+  }
+
+  @include vp-374 {
+    left: -2px;
+    bottom: 15px;
+  }
+
+  &_item {
+    position: relative;
+    width: 74px;
+    height: 61px;
+    padding: 8px;
+    background: none;
+    border: none;
+    color: #9b9b9b;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    transition: $trans-default;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #9b9b9b;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      transition: $trans-default;
+    }
+
+    &_active {
+      color: #eb7d14;
+
+      &::after {
+        background: #eb7d14;
+        right: 0;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

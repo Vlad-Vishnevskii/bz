@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
 import { HEADER_MENU_ITEMS } from './HeaderMenu.constans';
-import { LocaleIcon, CloseIcon, BurgerIcon } from '../../../Icons';
+import { CloseIcon, BurgerIcon } from '../../../Icons';
+import { LocaleSwitcher } from '../LocaleSwitcher';
 
 import styles from './styles.module.scss';
 
@@ -29,10 +30,7 @@ export const HeaderMenu = () => {
             </li>
           ))}
         </ul>
-        <div className={styles.menu_localeSelect}>
-          <span>RU</span>
-          <LocaleIcon />
-        </div>
+        <LocaleSwitcher />
         <button className={styles.menu_submitBtn} type='button'>
           Оставить заявку
         </button>
