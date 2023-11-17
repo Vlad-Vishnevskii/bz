@@ -19,7 +19,7 @@ export const Main = () => {
   };
 
   return (
-    <main className={styles.main}>
+    <div className={styles.main}>
       <div className={styles.main_container}>
         <img
           className={styles.main_bg}
@@ -40,6 +40,6 @@ export const Main = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </main>
+    </div>
   );
 };

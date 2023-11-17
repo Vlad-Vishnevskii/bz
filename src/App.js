@@ -1,12 +1,23 @@
-import { Header, Footer, Main } from './modules';
+import { Header, Footer, Main, Technology } from './modules';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/styles.scss';
 
 function App() {
+  const About = () => <h2>Контакты</h2>;
+
   return (
     <div className='app'>
-      <Header />
-      <Main />       
-      <Footer />
+      <Router>
+        <Header />
+        <main>
+          <Routes>
+            <Route path='/' element={<Main />} />
+            <Route path='/technology' element={<Technology />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
     </div>
   );
 }

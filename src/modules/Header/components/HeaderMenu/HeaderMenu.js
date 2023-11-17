@@ -3,6 +3,7 @@ import cn from 'classnames';
 import { HEADER_MENU_ITEMS } from './HeaderMenu.constans';
 import { CloseIcon, BurgerIcon } from '../../../Icons';
 import { LocaleSwitcher } from '../LocaleSwitcher';
+import { Link } from 'react-router-dom';
 
 import styles from './styles.module.scss';
 
@@ -17,6 +18,10 @@ export const HeaderMenu = () => {
     }
   };
 
+  const onMobileItemClick = () => {
+    setMobileMenuOpen(false)
+  }
+
   return (
     <>
       <nav className={cn(styles.menu, { [styles.menu_open]: mobileMenuOpen })}>
@@ -26,7 +31,7 @@ export const HeaderMenu = () => {
         <ul className={styles.menu_list}>
           {HEADER_MENU_ITEMS.map((item) => (
             <li className={styles.menu_item} key={item.id}>
-              {item.name}
+              <Link onClick={onMobileItemClick} to={item?.href}>{item.name}</Link>
             </li>
           ))}
         </ul>

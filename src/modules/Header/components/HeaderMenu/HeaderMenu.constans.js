@@ -2,6 +2,7 @@ export const HEADER_MENU_ITEMS = [
   {
     id: 0,
     name: 'Технологии',
+    href: '/technology',
   },
   {
     id: 1,

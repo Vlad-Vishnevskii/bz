@@ -82,12 +82,16 @@
 
   &_item {
     padding: 10px;
-    color: #282d32;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
     white-space: nowrap;
+
+    a {
+      color: #282d32;
+      text-decoration: none;
+    }
 
     @include vp-1439 {
       font-size: 40px;
