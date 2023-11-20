@@ -23,5 +23,6 @@ export const HEADER_MENU_ITEMS = [
   {
     id: 5,
     name: 'Контакты',
+    href: '/contacts',
   },
 ];

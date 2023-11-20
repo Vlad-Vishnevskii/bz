@@ -1,11 +1,19 @@
 import React from 'react';
 import cn from 'classnames';
 import logo from '../../assets/logo.svg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { checkFooterHidden } from './Footer.helpers';
 
 import styles from './styles.module.scss';
 
 export const Footer = () => {
+  const location = useLocation();
+  const isFooterHidden = checkFooterHidden(location.pathname);
+
+  if (isFooterHidden) {
+    return null
+  }
+
   return (
     <footer className={styles.footer}>
       <Link className={styles.footer_toMainBtn} to='/'>
