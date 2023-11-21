@@ -7,6 +7,7 @@ export const AboutInput = ({ value, change, className }) => {
       value={value}
       onChange={(e) => change(e.target.value)}
       className={className}
+      placeholder="Кратко опишите ваш проект"
     />
   );
 };

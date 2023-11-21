@@ -1,6 +1,7 @@
 import React from 'react';
 import ellipseBg from '../../assets/ellipse-bg.png';
-import { OrderFrom } from '../OrderForm';
+import { OrderForm } from '../OrderForm';
+
 import styles from './styles.module.scss';
 
 export const Contacts = () => {
@@ -45,7 +46,7 @@ export const Contacts = () => {
         </p>
       </div>
       <div className={styles.contacts_frame}>
-        <OrderFrom/>
+        <OrderForm/>
       </div>
       <p className={styles.contacts_copyright}>
         Все права защищены, ООО БИЗОНИКС, 2023

@@ -1,0 +1,40 @@
+@import '../../variables';
+
+.overlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(40, 45, 50, 0.5);
+  z-index: 7;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .modal {
+    position: relative;
+    background: #ffffff;
+    width: 85vw;
+    height: 90vh;
+
+    @include vp-1023 {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+
+  .closeICon {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+}

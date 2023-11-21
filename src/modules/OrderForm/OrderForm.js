@@ -3,7 +3,7 @@ import { NameInput, ContactInput, AboutInput } from './components';
 
 import styles from './styles.module.scss';
 
-export const OrderFrom = () => {
+export const OrderForm = () => {
   const [stateForm, setStateForm] = useState({
     name: '',
     conctact: '',
@@ -31,8 +31,6 @@ export const OrderFrom = () => {
     }));
   };
 
-  console.log(stateForm);
-
   return (
     <form className={styles.orderForm}>
       <h2 className={styles.orderForm_title}>Начать проект</h2>
@@ -51,6 +49,7 @@ export const OrderFrom = () => {
         Заполняя данную форму вы принимаете условия Соглашения об использовании
         сайта, в том числе в части обработки использования персональных данных
       </p>
+      <button className={styles.orderForm_submitBtn} type='submit'>Отправить заявку</button>
     </form>
   );
 };

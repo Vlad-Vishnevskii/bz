@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .orderForm {
   display: flex;
   flex-direction: column;
@@ -89,11 +91,34 @@
   }
 
   &_agreement {
+    margin-top: 80px;
     color: #e3e4e6;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
     text-align: center;
+  }
+
+  &_submitBtn {
+    margin-top: 80px;
+    display: flex;
+    width: 420px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background: #eb7d14;
+    transition: $trans-default;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+
+    &:hover {
+      background: #d66800;
+    }
   }
 }

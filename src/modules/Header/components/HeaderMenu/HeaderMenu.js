@@ -1,52 +1,50 @@
-import React, { useState } from 'react';
+import React from 'react';
 import cn from 'classnames';
 import { HEADER_MENU_ITEMS } from './HeaderMenu.constans';
 import { CloseIcon, BurgerIcon } from '../../../Icons';
 import { LocaleSwitcher } from '../LocaleSwitcher';
 import { Link } from 'react-router-dom';
+import { ModalOrder } from '../../../ModalOrder';
+import { useBoolean } from '../../../../hooks';
 
 import styles from './styles.module.scss';
 
 export const HeaderMenu = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const burgerMenuHanler = () => {
-    if (mobileMenuOpen) {
-      setMobileMenuOpen(false);
-    } else {
-      setMobileMenuOpen(true);
-    }
-  };
-
-  const onMobileItemClick = () => {
-    setMobileMenuOpen(false)
-  }
+  const [mobileMenuOpen, setMobileMenuOpen] = useBoolean(false);
+  const [modalIsOpen, setIsOpen] = useBoolean(false);
 
   return (
     <>
       <nav className={cn(styles.menu, { [styles.menu_open]: mobileMenuOpen })}>
-        <button onClick={burgerMenuHanler} className={styles.menu_closeBtn}>
+        <button onClick={setMobileMenuOpen.off} className={styles.menu_closeBtn}>
           <CloseIcon />
         </button>
         <ul className={styles.menu_list}>
           {HEADER_MENU_ITEMS.map((item) => (
             <li className={styles.menu_item} key={item.id}>
-              <Link onClick={onMobileItemClick} to={item?.href}>{item.name}</Link>
+              <Link onClick={setMobileMenuOpen.off} to={item?.href}>
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
         <LocaleSwitcher />
-        <button className={styles.menu_submitBtn} type='button'>
+        <button
+          onClick={setIsOpen.on}
+          className={styles.menu_submitBtn}
+          type='button'
+        >
           Оставить заявку
         </button>
       </nav>
       <button
-        onClick={burgerMenuHanler}
+        onClick={setMobileMenuOpen.on}
         className={styles.burgerBtn}
         type='button'
       >
         <BurgerIcon />
       </button>
+      <ModalOrder modalIsOpen={modalIsOpen} closeModal={setIsOpen.off} />
     </>
   );
 };
