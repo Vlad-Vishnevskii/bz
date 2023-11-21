@@ -2,7 +2,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { SliderCard } from './components/sliderCard';
-import ellipseBg from './assets/ellipse-bg.png';
+import ellipseBg from '../../assets/ellipse-bg.png';
 import { useSliderData } from './useSliderData';
 
 import styles from './styles.module.scss';

@@ -7,11 +7,11 @@ import { checkFooterHidden } from './Footer.helpers';
 import styles from './styles.module.scss';
 
 export const Footer = () => {
-  const location = useLocation();
-  const isFooterHidden = checkFooterHidden(location.pathname);
+  const { pathname } = useLocation();
+  const isFooterHidden = checkFooterHidden(pathname);
 
   if (isFooterHidden) {
-    return null
+    return null;
   }
 
   return (
@@ -26,18 +26,18 @@ export const Footer = () => {
         />
       </Link>
 
-      <a className={styles.footer_contact} href='/'>
+      <a className={styles.footer_contact} href='mailto:info@bisonix.com'>
         info@bisonix.com
       </a>
       <a
         className={cn(styles.footer_contact, styles.footer_contactPhone)}
-        href='/'
+        href='tel:+48571053900'
       >
         +48 571 053 900
       </a>
       <a
         className={cn(styles.footer_contact, styles.footer_contactPhone)}
-        href='/'
+        href='tel:+375336670448'
       >
         +375 33 667 04 48
       </a>

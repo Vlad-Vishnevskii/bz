@@ -1,0 +1,17 @@
+@import '../variables';
+
+.appContainer {
+  overflow: hidden;
+  min-height: 100vh;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.22) 7.62%,
+      rgba(235, 125, 20, 0.1) 25.5%,
+      rgba(255, 255, 255, 0.1) 70.92%
+    ),
+    #fafafa;
+
+  &_grey {
+    background: #fafafa;
+  }
+}
