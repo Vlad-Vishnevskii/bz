@@ -1,5 +1,6 @@
 import React from 'react';
 import ellipseBg from '../../assets/ellipse-bg.png';
+import { OrderFrom } from '../OrderForm';
 import styles from './styles.module.scss';
 
 export const Contacts = () => {
@@ -33,7 +34,7 @@ export const Contacts = () => {
       <div className={styles.contacts_filed}>
         <p className={styles.contacts_label}>Telegram</p>
         <a className={styles.contacts_value} href='https://t.me/+48571053900'>
-          <img className={styles.contacts_tgImage} src='/telegram_white.png'/>
+          <img className={styles.contacts_tgImage} src='/telegram_white.png' alt='telegram'/>
           <span>+48 571 053 900</span>
         </a>
       </div>
@@ -42,6 +43,9 @@ export const Contacts = () => {
         <p className={styles.contacts_value}>
           210027, Республика Беларусь, Витебск, П. Бровки 4б, офис 32г
         </p>
+      </div>
+      <div className={styles.contacts_frame}>
+        <OrderFrom/>
       </div>
       <p className={styles.contacts_copyright}>
         Все права защищены, ООО БИЗОНИКС, 2023

@@ -4,3 +4,4 @@ export * from './Icons';
 export * from './Main';
 export * from './Technology';
 export * from './Contacts';
+export * from './OrderForm';
