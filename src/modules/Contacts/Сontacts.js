@@ -9,7 +9,7 @@ import styles from './styles.module.scss';
 
 export const Contacts = () => {
   const [modalIsOpen, setIsOpen] = useBoolean(false);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className={styles.contacts}>
@@ -20,7 +20,7 @@ export const Contacts = () => {
         width={777}
         height={777}
       />
-      <h1 className={styles.contacts_title}>{t('title')}</h1>
+      <h1 className={styles.contacts_title}>{t('contacts.title')}</h1>
       <div className={styles.contacts_filed}>
         <p className={styles.contacts_label}>E-mail</p>
         <a className={styles.contacts_value} href='mailto:info@bisonix.com'>
@@ -28,7 +28,7 @@ export const Contacts = () => {
         </a>
       </div>
       <div className={styles.contacts_filed}>
-        <p className={styles.contacts_label}>Телефон</p>
+        <p className={styles.contacts_label}>{t('contacts.phoneLabel')}</p>
         <div className={styles.contacts_phoneContainer}>
           <a className={styles.contacts_value} href='tel:+375336670448'>
             +375 33 667 04 48
@@ -50,9 +50,9 @@ export const Contacts = () => {
         </a>
       </div>
       <div className={styles.contacts_filed}>
-        <p className={styles.contacts_label}>Адрес</p>
+        <p className={styles.contacts_label}>{t('contacts.addresLabel')}</p>
         <p className={styles.contacts_value}>
-          210027, Республика Беларусь, Витебск, П. Бровки 4б, офис 32г
+        {t('contacts.addresValue')}
         </p>
       </div>
       <div className={styles.contacts_frame}>
@@ -63,10 +63,10 @@ export const Contacts = () => {
         className={styles.contacts_orderBtn}
         type='button'
       >
-        Оставить заявку
+        {t('contacts.orderBtn')}
       </button>
       <p className={styles.contacts_copyright}>
-        Все права защищены, ООО БИЗОНИКС, 2023
+        {t('contacts.copyright')}
       </p>
       <ModalOrder modalIsOpen={modalIsOpen} closeModal={setIsOpen.off} />
     </div>

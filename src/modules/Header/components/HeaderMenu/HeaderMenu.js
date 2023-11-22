@@ -6,12 +6,14 @@ import { LocaleSwitcher } from '../LocaleSwitcher';
 import { Link } from 'react-router-dom';
 import { ModalOrder } from '../../../ModalOrder';
 import { useBoolean } from '../../../../hooks';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
 export const HeaderMenu = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useBoolean(false);
   const [modalIsOpen, setIsOpen] = useBoolean(false);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -23,7 +25,7 @@ export const HeaderMenu = () => {
           {HEADER_MENU_ITEMS.map((item) => (
             <li className={styles.menu_item} key={item.id}>
               <Link onClick={setMobileMenuOpen.off} to={item?.href}>
-                {item.name}
+                {t(item.name)}
               </Link>
             </li>
           ))}
@@ -34,7 +36,7 @@ export const HeaderMenu = () => {
           className={styles.menu_submitBtn}
           type='button'
         >
-          Оставить заявку
+          {t('header.orderBtn')}
         </button>
       </nav>
       <button

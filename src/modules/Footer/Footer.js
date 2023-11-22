@@ -3,12 +3,14 @@ import cn from 'classnames';
 import logo from '../../assets/logo.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { checkFooterHidden } from './Footer.helpers';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
 export const Footer = () => {
   const { pathname } = useLocation();
   const isFooterHidden = checkFooterHidden(pathname);
+  const { t } = useTranslation();
 
   if (isFooterHidden) {
     return null;
@@ -42,7 +44,7 @@ export const Footer = () => {
         +375 33 667 04 48
       </a>
       <p className={styles.footer_copyright}>
-        Все права защищены, ООО БИЗОНИКС, 2023
+        {t('contacts.copyright')}
       </p>
     </footer>
   );

@@ -4,54 +4,28 @@ export const useSliderData = () => {
   return [
     {
       id: 1,
-      title: (
-        <span>
-          Мы разрабатываем <br/><b>мобильные и web приложения</b><br/> для gambling
-          индустрии <br/> и не только
-        </span>
-      ),
-      description:
-        'Наша компания занимается разработкой мобильных приложений и веб сервисов с 2013 года. Нами запущено пять проектав сфере гемблинга и более 10 проектов в других сферах',
+      title: 'main.slide1.title',
+      description: 'main.slide1.description',
     },
     {
       id: 2,
-      title: (
-        <span>
-          slide <b>2</b> 
-        </span>
-      ),
-      description:
-        'slide 2',
+      title: 'main.slide2.title',
+      description: 'main.slide2.description',
     },
     {
       id: 3,
-      title: (
-        <span>
-          slide <b>3</b> 
-        </span>
-      ),
-      description:
-        'slide 3',
+      title: 'main.slide3.title',
+      description: 'main.slide3.description',
     },
     {
       id: 4,
-      title: (
-        <span>
-          slide <b>4</b> 
-        </span>
-      ),
-      description:
-        'slide 4',
+      title: 'main.slide4.title',
+      description: 'main.slide4.description',
     },
     {
       id: 5,
-      title: (
-        <span>
-          slide <b>5</b> 
-        </span>
-      ),
-      description:
-        'slide 5',
+      title: 'main.slide5.title',
+      description: 'main.slide5.description',
     },
   ];
 };

@@ -1,28 +1,28 @@
 export const HEADER_MENU_ITEMS = [
   {
     id: 0,
-    name: 'Технологии',
+    name: 'header.technology',
     href: '/technology',
   },
   {
     id: 1,
-    name: 'Проекты',
+    name: 'header.projects',
   },
   {
     id: 2,
-    name: 'Наша команда',
+    name: 'header.about',
   },
   {
     id: 3,
-    name: 'Блог',
+    name: 'header.blog',
   },
   {
     id: 4,
-    name: 'Вакансии',
+    name: 'header.vacancy',
   },
   {
     id: 5,
-    name: 'Контакты',
+    name: 'header.contacts',
     href: '/contacts',
   },
 ];

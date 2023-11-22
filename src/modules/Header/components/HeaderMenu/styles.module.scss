@@ -3,6 +3,7 @@
 .menu {
   display: flex;
   align-items: center;
+  width: 100%;
   gap: 37px;
 
   @include vp-1439 {

@@ -36,7 +36,7 @@ export const Main = () => {
       >
         {sliderData.map((item) => (
           <SwiperSlide key={item.id}>
-            <SliderCard description={item.description}>{item.title}</SliderCard>
+            <SliderCard {...item}/>
           </SwiperSlide>
         ))}
       </Swiper>

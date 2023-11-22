@@ -1,26 +1,23 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { TechnologyList } from './components';
 import { BACKEND_TECHNOLOGY, FRONTEND_TECHNOLOGY } from './Technology.constans';
 import styles from './styles.module.scss';
 
 export const Technology = () => {
+  const { t } = useTranslation();
   return (
     <div className={styles.technology}>
-      <h1 className={styles.technology_title}>Технологии</h1>
+      <h1 className={styles.technology_title}>{t('technology.title')}</h1>
       <p className={styles.technology_description}>
-        Bisonix специализируется на разработке сложных и крупных проектов.
-        Различные функциональные особенности разработанных нами порталов и
-        сервисов требуют тщательного изучения в процессе подготовки, выбора и
-        реализации на проекте. С одинаковым вниманием мы подходим как к
-        front-end, так и к back-end разработке. Наши специалисты пользуются
-        наиболее перспективными и передовыми стеками технологий.
+        {t('technology.description')}
       </p>
       <TechnologyList
-        title='Back-end разработка'
+        title={t('technology.backendTitle')}
         listData={BACKEND_TECHNOLOGY}
       />
       <TechnologyList
-        title='Front-end разработка'
+        title={t('technology.frontendTitle')}
         listData={FRONTEND_TECHNOLOGY}
       />
     </div>

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { NameInput, ContactInput, AboutInput } from './components';
 
 import styles from './styles.module.scss';
 
-export const OrderForm = ({closeModal}) => {
+export const OrderForm = ({ closeModal }) => {
+  const { t } = useTranslation();
   const [stateForm, setStateForm] = useState({
     name: '',
     conctact: '',
@@ -33,23 +35,30 @@ export const OrderForm = ({closeModal}) => {
 
   return (
     <form onSubmit={closeModal} className={styles.orderForm}>
-      <h2 className={styles.orderForm_title}>Начать проект</h2>
+      <h2 className={styles.orderForm_title}>{t('orderForm.title')}</h2>
       <p className={styles.orderForm_description}>
-        Заполните эту форму, и наш менеджер свяжется с Вами в течении 24 часов с
-        момента отправки заявки
+        {t('orderForm.description')}
       </p>
-      <NameInput value={stateForm.name} change={onNameChange} />
-      <ContactInput value={stateForm.conctact} change={onContactChange} />
+      <NameInput
+        value={stateForm.name}
+        change={onNameChange}
+        placeholderText={t('orderForm.placeholderName')}
+      />
+      <ContactInput
+        value={stateForm.conctact}
+        change={onContactChange}
+        placeholderText={t('orderForm.placeholderContact')}
+      />
       <AboutInput
         value={stateForm.about}
         change={onAboutChange}
         className={styles.aboutInput}
+        placeholderText={t('orderForm.placeholderProject')}
       />
-      <p className={styles.orderForm_agreement}>
-        Заполняя данную форму вы принимаете условия Соглашения об использовании
-        сайта, в том числе в части обработки использования персональных данных
-      </p>
-      <button className={styles.orderForm_submitBtn} type='submit'>Отправить заявку</button>
+      <p className={styles.orderForm_agreement}>{t('orderForm.agreement')}</p>
+      <button className={styles.orderForm_submitBtn} type='submit'>
+        {t('orderForm.submitBtn')}
+      </button>
     </form>
   );
 };
