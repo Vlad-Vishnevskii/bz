@@ -12,6 +12,7 @@
   line-height: 140%;
   cursor: pointer;
   min-width: 56px;
+  text-transform: capitalize;
 
   &:hover {
     color: #d66800;
@@ -90,6 +91,7 @@
     font-weight: 600;
     line-height: 140%;
     transition: $trans-default;
+    text-transform: capitalize;
 
     &::after {
       content: '';

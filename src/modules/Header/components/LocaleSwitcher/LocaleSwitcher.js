@@ -3,6 +3,7 @@ import cn from 'classnames';
 import { LocaleIcon } from '../../../Icons';
 import { useClickAway } from '../../../../hooks';
 import { LOCALE_LIST } from './LocaleSwitcher.constans';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
@@ -10,6 +11,7 @@ export const LocaleSwitcher = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [activeItem, setActiveItem] = useState(LOCALE_LIST[0].value);
   const dropdownRef = useRef(null);
+  const {i18n} = useTranslation();
 
   const dropdownHandler = () => {
     setDropdownOpen(true);
@@ -18,6 +20,7 @@ export const LocaleSwitcher = () => {
   const optionClick = (e, value) => {
     e.stopPropagation();
     setActiveItem(value);
+    i18n.changeLanguage(value);
     setDropdownOpen(false);
   };
 
@@ -27,9 +30,12 @@ export const LocaleSwitcher = () => {
 
   const setMobileActiveItem = (value) => {
     setActiveItem(value);
+    i18n.changeLanguage(value);
   };
 
   useClickAway(dropdownRef, closeDropdown);
+
+
 
   return (
     <>

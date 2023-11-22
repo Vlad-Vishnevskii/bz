@@ -1,10 +1,10 @@
 export const LOCALE_LIST = [
   {
     id: 0,
-    value: 'Ru',
+    value: 'ru',
   },
   {
     id: 1,
-    value: 'En',
+    value: 'en',
   },
 ];

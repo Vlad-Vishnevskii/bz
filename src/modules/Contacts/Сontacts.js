@@ -3,11 +3,13 @@ import ellipse from '../../assets/ellipse-bg.png';
 import { OrderForm } from '../OrderForm';
 import { useBoolean } from '../../hooks';
 import { ModalOrder } from '../ModalOrder';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
 export const Contacts = () => {
   const [modalIsOpen, setIsOpen] = useBoolean(false);
+  const { t, i18n } = useTranslation();
 
   return (
     <div className={styles.contacts}>
@@ -18,7 +20,7 @@ export const Contacts = () => {
         width={777}
         height={777}
       />
-      <h1 className={styles.contacts_title}>Контакты</h1>
+      <h1 className={styles.contacts_title}>{t('title')}</h1>
       <div className={styles.contacts_filed}>
         <p className={styles.contacts_label}>E-mail</p>
         <a className={styles.contacts_value} href='mailto:info@bisonix.com'>
