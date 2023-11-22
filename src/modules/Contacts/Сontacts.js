@@ -1,18 +1,22 @@
 import React from 'react';
-import ellipseBg from '../../assets/ellipse-bg.png';
+import ellipse from '../../assets/ellipse-bg.png';
 import { OrderForm } from '../OrderForm';
+import { useBoolean } from '../../hooks';
+import { ModalOrder } from '../ModalOrder';
 
 import styles from './styles.module.scss';
 
 export const Contacts = () => {
+  const [modalIsOpen, setIsOpen] = useBoolean(false);
+
   return (
     <div className={styles.contacts}>
       <img
         className={styles.contacts_bg}
-        src={ellipseBg}
+        src={ellipse}
         alt='bg'
-        width={635}
-        height={636}
+        width={777}
+        height={777}
       />
       <h1 className={styles.contacts_title}>Контакты</h1>
       <div className={styles.contacts_filed}>
@@ -35,7 +39,11 @@ export const Contacts = () => {
       <div className={styles.contacts_filed}>
         <p className={styles.contacts_label}>Telegram</p>
         <a className={styles.contacts_value} href='https://t.me/+48571053900'>
-          <img className={styles.contacts_tgImage} src='/telegram_white.png' alt='telegram'/>
+          <img
+            className={styles.contacts_tgImage}
+            src='/telegram_white.png'
+            alt='telegram'
+          />
           <span>+48 571 053 900</span>
         </a>
       </div>
@@ -46,11 +54,19 @@ export const Contacts = () => {
         </p>
       </div>
       <div className={styles.contacts_frame}>
-        <OrderForm/>
+        <OrderForm />
       </div>
+      <button
+        onClick={setIsOpen.on}
+        className={styles.contacts_orderBtn}
+        type='button'
+      >
+        Оставить заявку
+      </button>
       <p className={styles.contacts_copyright}>
         Все права защищены, ООО БИЗОНИКС, 2023
       </p>
+      <ModalOrder modalIsOpen={modalIsOpen} closeModal={setIsOpen.off} />
     </div>
   );
 };

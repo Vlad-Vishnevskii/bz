@@ -7,24 +7,66 @@
   width: 100%;
   max-width: 1079px;
   margin: 0 auto;
+  padding: 40px 0;
   height: 100%;
 
+  @include vp-1439 {
+    padding: 20px 40px;
+  }
+  
+  @include vp-1023 {
+    padding: 20px 70px;
+    height: auto;
+    min-height: 950px;
+  }
+
+  @include vp-767 {
+    padding: 15px 16px;
+    min-height: 812px;
+  }
+
   &_title {
+    margin: 0;
     color: #282d32;
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: 130%;
     text-transform: uppercase;
+
+    @include vp-1023 {
+      margin-top: 100px;
+      align-self: flex-start;
+    }
+
+    @include vp-767 {
+      font-size: 40px;
+      margin-top: 45px;
+    }
   }
 
   &_description {
+    max-width: 683px;
+    margin-top: 20px;
+    margin-bottom: 38px;
     color: #9b9b9b;
     text-align: center;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
+
+    @include vp-1023 {
+      align-self: flex-start;
+      max-width: 500px;
+      text-align: left;
+      padding-right: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      font-weight: 400;
+    }
   }
 
   input,
@@ -32,6 +74,7 @@
     width: 100%;
     height: 65px;
     padding: 20px 10px;
+    margin-bottom: 40px;
     border: none;
     border-bottom: 2px solid #9b9b9b;
     outline: none;
@@ -41,6 +84,11 @@
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
+    transition: $trans-default;
+
+    @include vp-767 {
+      margin-bottom: 30px;
+    }
 
     &::-webkit-input-placeholder {
       color: #9b9b9b;
@@ -49,7 +97,12 @@
       font-style: normal;
       font-weight: 600;
       line-height: 140%;
+
+      @include vp-767 {
+        font-size: 14px;
+      }
     }
+
     &::-moz-placeholder {
       color: #9b9b9b;
       font-family: 'Petrov Sans-Trial';
@@ -57,7 +110,12 @@
       font-style: normal;
       font-weight: 600;
       line-height: 140%;
+
+      @include vp-767 {
+        font-size: 14px;
+      }
     } /* Firefox 19+ */
+
     &:-moz-placeholder {
       color: #9b9b9b;
       font-family: 'Petrov Sans-Trial';
@@ -65,7 +123,12 @@
       font-style: normal;
       font-weight: 600;
       line-height: 140%;
+
+      @include vp-767 {
+        font-size: 14px;
+      }
     } /* Firefox 18- */
+
     &:-ms-input-placeholder {
       color: #9b9b9b;
       font-family: 'Petrov Sans-Trial';
@@ -73,17 +136,28 @@
       font-style: normal;
       font-weight: 600;
       line-height: 140%;
+
+      @include vp-767 {
+        font-size: 14px;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      border-bottom: 2px solid #282D32;
     }
   }
 
   .aboutInput {
     resize: none;
     height: 120px;
+    border-bottom: 2px solid #9b9b9b;
 
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
     appearance: textfield;
     scrollbar-width: 0;
+    transition: none;
 
     &::-webkit-scrollbar {
       width: 0;
@@ -91,17 +165,27 @@
   }
 
   &_agreement {
-    margin-top: 80px;
+    margin-top: 0;
     color: #e3e4e6;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
     text-align: center;
+
+    @include vp-1023 {
+      text-align: left;
+      align-self: flex-start;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      margin-top: 0;
+    }
   }
 
   &_submitBtn {
-    margin-top: 80px;
+    margin-top: 50px;
     display: flex;
     width: 420px;
     padding: 20px;
@@ -119,6 +203,18 @@
 
     &:hover {
       background: #d66800;
+    }
+
+    @include vp-1023 {
+      width: 385px;
+      align-self: flex-start;
+    }
+
+    @include vp-767 {
+      margin-top: 40px;
+      width: 100%;
+      max-width: 343px;
+      font-size: 14px;
     }
   }
 }

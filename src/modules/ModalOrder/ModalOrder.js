@@ -28,7 +28,7 @@ export const ModalOrder = ({ modalIsOpen, closeModal }) => {
       <button className={styles.closeICon} onClick={closeModal}>
         <CloseIcon />
       </button>
-      <OrderForm />
+      <OrderForm closeModal={closeModal} />
     </ModalContainer>
   );
 };

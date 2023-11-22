@@ -3,7 +3,7 @@ import { NameInput, ContactInput, AboutInput } from './components';
 
 import styles from './styles.module.scss';
 
-export const OrderForm = () => {
+export const OrderForm = ({closeModal}) => {
   const [stateForm, setStateForm] = useState({
     name: '',
     conctact: '',
@@ -32,7 +32,7 @@ export const OrderForm = () => {
   };
 
   return (
-    <form className={styles.orderForm}>
+    <form onSubmit={closeModal} className={styles.orderForm}>
       <h2 className={styles.orderForm_title}>Начать проект</h2>
       <p className={styles.orderForm_description}>
         Заполните эту форму, и наш менеджер свяжется с Вами в течении 24 часов с

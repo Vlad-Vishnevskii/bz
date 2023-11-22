@@ -10,6 +10,7 @@
   right: 0;
   bottom: 0;
   background: rgba(40, 45, 50, 0.5);
+  
   z-index: 7;
   box-sizing: border-box;
 
@@ -20,21 +21,42 @@
   .modal {
     position: relative;
     background: #ffffff;
-    width: 85vw;
+    width: 90vw;
     height: 90vh;
 
     @include vp-1023 {
       width: 100vw;
       height: 100vh;
+      overflow: hidden;
+      overflow-y: auto;
     }
   }
 
   .closeICon {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 48px;
+    right: 40px;
     cursor: pointer;
     background: none;
     border: none;
+    transition: $trans-default;
+
+    @include vp-1023 {
+      right: 77px;
+    }
+
+    @include vp-767 {
+      right: 16px;
+      top: 22px;
+
+      svg {
+        width: 19px;
+        height: 19px;
+      }
+    }
+
+    &:hover {
+      opacity: 0.6;      
+    }
   }
 }

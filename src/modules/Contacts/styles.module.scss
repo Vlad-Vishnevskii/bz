@@ -10,10 +10,14 @@
   padding: 40px 20px 47px 20px;
   margin: 0 auto;
 
+  @include vp-767 {
+    padding-top: 0;
+  }
+
   &_bg {
     position: absolute;
     z-index: 1;
-    top: -41px;
+    top: -32px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -21,14 +25,22 @@
       top: 28px;
     }
 
+    @include vp-1023 {
+      top: 86px;
+      width: 623px;
+      height: 622px;
+    }
+
     @include vp-767 {
-      top: -5px;
-      width: 438px;
-      height: auto;
+      top: 112px;
+      width: 374px;
+      height: 374px;
     }
   }
 
   &_title {
+    margin-top: 5px;
+    margin-bottom: 0;
     position: relative;
     z-index: 2;
     color: #282d32;
@@ -37,6 +49,15 @@
     font-weight: 700;
     line-height: 130%; /* 62.4px */
     text-transform: uppercase;
+
+    @include vp-1023 {
+      margin-top: 50px;
+    }
+
+    @include vp-767 {
+      margin-top: 10px;
+      font-size: 32px;
+    }
   }
 
   &_filed {
@@ -45,17 +66,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 35px;
   }
 
   &_label {
+    margin-top: 10px;
+    margin-bottom: 0;
     color: #9b9b9b;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
+
+    @include vp-767 {
+      font-size: 14px;
+    }
   }
 
   &_value {
+    margin-top: 5px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -67,19 +96,38 @@
     line-height: 140%;
     text-decoration: none;
     text-align: center;
+
+    @include vp-767 {
+      font-size: 20px;
+    }
   }
 
   &_phoneContainer {
     display: flex;
     gap: 10px;
+
+    @include vp-767 {
+      flex-direction: column;
+    }
   }
 
   &_copyright {
+    margin-top: 35px;
     color: #282d32;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+
+    @include vp-1023 {
+      margin-top: 124px;
+    }
+
+    @include vp-767 {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+    }
   }
 
   &_tgImage {
@@ -91,10 +139,52 @@
   }
 
   &_frame {
+    margin-top: 60px;
     width: 100%;
     min-height: 841px;
     background: #fff;
     box-shadow: 0px 4px 4px -2px rgba(24, 39, 75, 0.08),
       0px 2px 4px -2px rgba(24, 39, 75, 0.12);
+
+    @include vp-1439 {
+      margin-top: 120px;
+    }
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &_orderBtn {
+    display: none;
+
+    @include vp-1023 {
+      margin-top: 68px;
+      display: flex;
+      width: 462px;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      background: #eb7d14;
+      transition: $trans-default;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%;
+
+      &:hover {
+        background: #d66800;
+      }
+
+      @include vp-767 {
+        margin-top: 20px;
+        width: 100%;
+        max-width: 343px;
+        font-size: 18px;
+      }
+    }
   }
 }
