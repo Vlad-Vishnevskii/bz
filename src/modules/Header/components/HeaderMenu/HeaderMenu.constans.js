@@ -11,6 +11,7 @@ export const HEADER_MENU_ITEMS = [
   {
     id: 2,
     name: 'header.about',
+    href: '/about',
   },
   {
     id: 3,

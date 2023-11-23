@@ -5,6 +5,7 @@
   align-items: center;
   width: 100%;
   gap: 37px;
+  min-width: 1152px;
 
   @include vp-1439 {
     position: fixed;

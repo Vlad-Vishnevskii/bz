@@ -1,0 +1,41 @@
+@import '../../../../variables.scss';
+
+.cooperationModels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_title {
+    margin-top: 60px;
+    color: #282d32;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 62.4px */
+    text-transform: uppercase;
+  }
+
+  &_list {
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    span {
+      color: #282d32;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+}

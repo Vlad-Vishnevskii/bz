@@ -6,3 +6,4 @@ export * from './Technology';
 export * from './Contacts';
 export * from './OrderForm';
 export * from './ModalOrder';
+export * from './About';
