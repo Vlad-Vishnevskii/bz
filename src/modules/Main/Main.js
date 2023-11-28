@@ -30,13 +30,13 @@ export const Main = () => {
         />
       </div>
       <Swiper
-      modules={[Pagination]}
-      pagination={pagination}
-      className={styles.swiper}     
+        modules={[Pagination]}
+        pagination={pagination}
+        className={styles.swiper}
       >
         {sliderData.map((item) => (
           <SwiperSlide key={item.id}>
-            <SliderCard {...item}/>
+            <SliderCard {...item} />
           </SwiperSlide>
         ))}
       </Swiper>

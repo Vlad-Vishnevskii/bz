@@ -33,21 +33,22 @@
   }
 
   &_closeBtn {
-    position: absolute;
-    top: 47px;
-    right: 40px;
-    color: #9b9b9b;
-    border: none;
-    background: none;
     display: none;
 
     @include vp-1439 {
       display: block;
+      position: absolute;
+      z-index: 10;
+      top: 47px;
+      right: 40px;
+      color: #9b9b9b;
+      border: none;
+      background: none;
     }
 
     @include vp-767 {
       top: 52px;
-      right: 42px;      
+      right: 42px;
     }
 
     @include vp-374 {

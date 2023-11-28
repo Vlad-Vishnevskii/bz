@@ -3,7 +3,7 @@ import React from 'react';
 import { useBoolean } from '../../hooks';
 import { ModalOrder } from '../ModalOrder';
 import { useTranslation, Trans } from 'react-i18next';
-import { Statistic, CooperationModels } from './components';
+import { Statistic, CooperationModels, TeamSlider } from './components';
 
 import styles from './styles.module.scss';
 
@@ -26,6 +26,7 @@ export const About = () => {
         <Statistic />
         <CooperationModels />
       </div>
+      <TeamSlider/>
       <div className={styles.about_container}>
         <p className={styles.about_descriptionBottom}>
           {t('about.description_bottom')}

@@ -1,0 +1,155 @@
+@import '../../../../variables.scss';
+
+.teamSlider {
+  width: 100%;
+  margin-top: 40px;
+
+  &_title {
+    color: #282d32;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include vp-767 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &_navigation {
+    margin-top: 43px;
+    padding-right: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 21px;
+
+    @include vp-767 {
+      margin-top: 23px;
+      padding-right: 11px;
+    }
+  }
+
+  &_leftArrow,
+  &_rightArrow {
+    border: 0;
+    background: 0;
+    cursor: pointer;
+    transition: $trans-default;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &_leftArrow {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  :global(.swiper-slide) {
+    width: 528px;
+    height: 406px;
+
+    @include vp-767 {
+      width: 314px;
+      height: 406px;
+    }
+  }
+}
+
+.sliderCard {
+  display: flex;
+  width: 528px;
+  height: 406px;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  background: #ffffff;
+  color: #000000;
+  transition: $trans-default;
+
+  @include vp-767 {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  &_active {
+    background: #eb7d14;
+    color: #ffffff;
+
+    .sliderCard_description {
+      color: #ffffff;
+    }
+  }
+
+  &_header {
+    display: flex;
+    gap: 20px;
+
+    @include vp-767 {
+      
+    }
+  }
+
+  &_photo {
+    width: 85px;
+    height: 85px;
+    border-radius: 85px;
+  }
+
+  &_headerText {
+    display: flex;
+    gap: 13px;
+    flex-direction: column;
+
+    @include vp-767 {
+      
+    }
+  }
+
+  &_name {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    @include vp-767 {
+      font-size: 24px;
+    }
+  }
+
+  &_post {
+    color: #e3e4e6;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+    @include vp-767 {
+      font-size: 20px;      
+    }
+  }
+
+  &_description {
+    color: #4c5157;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    
+    @include vp-767 {
+      font-size: 13px;
+    }
+  }
+}

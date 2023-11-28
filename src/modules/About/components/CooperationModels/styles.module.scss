@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 32px;
 
   &_title {
     margin-top: 60px;
@@ -14,14 +15,29 @@
     font-weight: 700;
     line-height: 130%; /* 62.4px */
     text-transform: uppercase;
+
+    @media (max-width: 1200px) {
+      margin-top: 35px;
+      margin-bottom: 15px;      
+    }
+
+    @include vp-767 {
+      margin-top: 29px;
+      font-size: 32px;
+    }
   }
 
   &_list {
     display: flex;
     gap: 40px;
     margin: 0;
+    margin-top: 20px;
     padding: 0;
     list-style: none;
+
+    @media (max-width: 1180px) {
+      flex-direction: column;      
+    }
   }
 
   &_item {
@@ -36,6 +52,11 @@
       font-weight: 600;
       line-height: normal;
       text-transform: uppercase;
+
+      @include vp-767 {
+        font-size: 24px;
+
+      }
     }
   }
 }
