@@ -1,0 +1,68 @@
+import { PROJECT_CARD_TYPES } from './components';
+
+export const PROJECTS_LIST = [
+  {
+    id: 0,
+    type: PROJECT_CARD_TYPES.long,
+    imgPath: '/images/projects/casino.png',
+    href: '/',
+    title: 'projects.card-0.title',
+    description: 'projects.card-0.description',
+  },
+  {
+    id: 1,
+    type: PROJECT_CARD_TYPES.regular,
+    imgPath: '/images/projects/bison.png',
+    href: '/',
+    title: 'projects.card-1.title',
+    description: 'projects.card-1.description',
+  },
+  {
+    id: 2,
+    type: PROJECT_CARD_TYPES.regular,
+    imgPath: '/images/projects/sportbet.png',
+    href: '/',
+    title: 'projects.card-2.title',
+    description: 'projects.card-2.description',
+  },
+  {
+    id: 3,
+    type: PROJECT_CARD_TYPES.longReverse,
+    imgPath: '/images/projects/finance_planing.png',
+    href: '/',
+    title: 'projects.card-3.title',
+    description: 'projects.card-3.description',
+  },
+  {
+    id: 4,
+    type: PROJECT_CARD_TYPES.long,
+    imgPath: '/images/projects/ostapilet.png',
+    href: '/',
+    title: 'projects.card-4.title',
+    description: 'projects.card-4.description',
+  },
+  {
+    id: 5,
+    type: PROJECT_CARD_TYPES.regular,
+    imgPath: '/images/projects/finbet.png',
+    href: '/',
+    title: 'projects.card-5.title',
+    description: 'projects.card-5.description',
+  },
+  {
+    id: 6,
+    type: PROJECT_CARD_TYPES.regular,
+    imgPath: '/images/projects/bfc.png',
+    href: '/',
+    title: 'projects.card-6.title',
+    description: 'projects.card-6.description',
+  },
+  {
+    id: 7,
+    type: PROJECT_CARD_TYPES.longReverse,
+    imgPath: '/images/projects/alfa.png',
+    href: '/',
+    title: 'projects.card-7.title',
+    description: 'projects.card-7.description',
+  },
+];

@@ -1,0 +1,88 @@
+@import '../../../../variables.scss';
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 766px;
+  //border: 1px solid red;
+  background: #ffffff;
+
+  img {
+    width: 640px;
+    height: 366px;
+  }
+
+  &_long,
+  &_longReverse {
+    flex-direction: row;
+    grid-column: 1 / -1;
+    min-height: 366px;
+
+    img {
+      width: 421px;
+      height: 366px;
+    }
+  }
+
+  &_longReverse {
+    flex-direction: row-reverse;
+  }
+
+  &_textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  }
+
+  &_label {
+    margin: 0;
+    color: #0078b4;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  &_title {
+    margin: 0;
+    color: #282d32;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  &_description {
+    margin: 0;
+    color: #4c5157;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  &_link {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    margin-top: auto;
+    color: #eb7d14;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    text-decoration: none;
+    transition: $trans-default;
+
+    &:hover {
+      color: #d66800;
+    }
+  }
+}

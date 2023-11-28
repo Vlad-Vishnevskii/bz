@@ -7,3 +7,4 @@ export * from './Contacts';
 export * from './OrderForm';
 export * from './ModalOrder';
 export * from './About';
+export * from './Projects';

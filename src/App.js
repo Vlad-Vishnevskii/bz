@@ -1,4 +1,12 @@
-import { Header, Footer, Main, Technology, Contacts, About } from './modules';
+import {
+  Header,
+  Footer,
+  Main,
+  Technology,
+  Contacts,
+  About,
+  Projects,
+} from './modules';
 import { AppContainer } from './AppContainer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/styles.scss';
@@ -15,6 +23,7 @@ function App() {
               <Route path='/technology' element={<Technology />} />
               <Route path='/contacts' element={<Contacts />} />
               <Route path='/about' element={<About />} />
+              <Route path='/projects' element={<Projects />} />
             </Routes>
           </main>
           <Footer />

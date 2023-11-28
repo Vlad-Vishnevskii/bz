@@ -3,14 +3,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { SliderCard } from './components/sliderCard';
 import ellipseBg from '../../assets/ellipse-bg.png';
-import { useSliderData } from './useSliderData';
+import { getSliderData } from './Main.helpers';
 
 import styles from './styles.module.scss';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 
 export const Main = () => {
-  const sliderData = useSliderData();
+  const sliderData = getSliderData();
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
@@ -24,7 +24,7 @@ export const Main = () => {
         <img
           className={styles.main_bg}
           src={ellipseBg}
-          alt='bg'
+          alt="bg"
           width={635}
           height={636}
         />

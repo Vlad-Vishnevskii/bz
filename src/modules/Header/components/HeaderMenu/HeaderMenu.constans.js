@@ -7,6 +7,7 @@ export const HEADER_MENU_ITEMS = [
   {
     id: 1,
     name: 'header.projects',
+    href: '/projects',
   },
   {
     id: 2,

@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const useSliderData = () => {
+export const getSliderData = () => {
   return [
     {
       id: 1,
