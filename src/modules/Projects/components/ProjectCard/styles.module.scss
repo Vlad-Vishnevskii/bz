@@ -6,10 +6,32 @@
   width: 100%;
   min-height: 766px;
   background: #ffffff;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 1350px) {
+    min-height: 600px;
+  }
+
+  @include vp-767 {
+    min-height: 550px;
+  }
+
+  @include vp-500 {
+    min-height: 350px;
+  }
 
   img {
     width: 640px;
     height: 366px;
+
+    @media (max-width: 1350px) {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &_long,
@@ -18,14 +40,37 @@
     grid-column: 1 / -1;
     min-height: 366px;
 
+    @media (max-width: 1350px) {
+      flex-direction: column;
+    }
+
     img {
       width: 421px;
       height: 366px;
+
+      @media (max-width: 1350px) {
+        width: 100%;
+        height: auto;
+      }
+
+      @media (max-width: 1023px) {
+        width: 620px;
+        height: 366px;
+      }
+
+      @include vp-767 {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
   &_longReverse {
     flex-direction: row-reverse;
+
+    @media (max-width: 1350px) {
+      flex-direction: column;
+    }
   }
 
   &_textContainer {
@@ -35,6 +80,14 @@
     width: 100%;
     height: 100%;
     padding: 20px;
+
+    @include vp-1023 {
+      gap: 16px;
+    }
+
+    @include vp-500 {
+      gap: 10px;
+    }
   }
 
   &_label {
@@ -44,6 +97,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+
+    @include vp-767 {
+      font-size: 13px;
+    }
   }
 
   &_title {
@@ -53,6 +110,10 @@
     font-style: normal;
     font-weight: 600;
     line-height: 28px;
+
+    @include vp-767 {
+      font-size: 24px;
+    }
   }
 
   &_description {
@@ -62,6 +123,18 @@
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
+
+    @media (max-width: 1350px) {
+      padding-right: 100px;
+    }
+
+    @include vp-1023 {
+      padding-right: 5px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+    }
   }
 
   &_link {
@@ -81,6 +154,19 @@
     line-height: 140%;
     text-decoration: none;
     transition: $trans-default;
+
+    @media (max-width: 1350px) {
+      margin-top: 20px;
+    }
+
+    @include vp-1023 {
+      margin-top: 36px;
+    }
+
+    @include vp-767 {
+      padding-right: 9px;
+      margin-top: 20px;
+    }
 
     &:hover {
       color: #d66800;

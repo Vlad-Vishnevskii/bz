@@ -22,6 +22,12 @@
   }
 }
 
+@mixin vp-500 {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
 @mixin vp-374 {
   @media (max-width: 374px) {
     @content;

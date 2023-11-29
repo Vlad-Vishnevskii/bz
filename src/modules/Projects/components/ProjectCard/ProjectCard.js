@@ -7,7 +7,15 @@ import { IconArrow } from '../../../Icons/IconArrow';
 
 import styles from './styles.module.scss';
 
-export const ProjectCard = ({ type, title, imgPath, description, href }) => {
+export const ProjectCard = ({
+  type,
+  title,
+  imgPath,
+  imgPathTablet,
+  imgPathMobile,
+  description,
+  href,
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -18,7 +26,11 @@ export const ProjectCard = ({ type, title, imgPath, description, href }) => {
           type === PROJECT_CARD_TYPES.longReverse,
       })}
     >
-      <img src={imgPath} alt={title} />
+      <picture>
+        <source srcSet={imgPathMobile} media="(max-width: 500px)" />
+        <source srcSet={imgPathTablet} media="(max-width: 1350px)" />
+        <img src={imgPath} alt={t(title)} />
+      </picture>
       <div className={styles.projectCard_textContainer}>
         <p className={styles.projectCard_label}>{t('projects.title')}</p>
         <h3 className={styles.projectCard_title}>{t(title)}</h3>
