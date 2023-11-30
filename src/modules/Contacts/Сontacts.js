@@ -16,59 +16,59 @@ export const Contacts = () => {
       <img
         className={styles.contacts_bg}
         src={ellipse}
-        alt='bg'
+        alt="bg"
         width={777}
         height={777}
       />
       <h1 className={styles.contacts_title}>{t('contacts.title')}</h1>
       <div className={styles.contacts_filed}>
         <p className={styles.contacts_label}>E-mail</p>
-        <a className={styles.contacts_value} href='mailto:info@bisonix.com'>
+        <a className={styles.contacts_value} href="mailto:info@bisonix.com">
           info@bisonix.com
         </a>
       </div>
       <div className={styles.contacts_filed}>
         <p className={styles.contacts_label}>{t('contacts.phoneLabel')}</p>
         <div className={styles.contacts_phoneContainer}>
-          <a className={styles.contacts_value} href='tel:+375336670448'>
+          <a className={styles.contacts_value} href="tel:+375336670448">
             +375 33 667 04 48
           </a>
-          <a className={styles.contacts_value} href='tel:+48571053900'>
+          <a className={styles.contacts_value} href="tel:+48571053900">
             +48 571 053 900
           </a>
         </div>
       </div>
       <div className={styles.contacts_filed}>
         <p className={styles.contacts_label}>Telegram</p>
-        <a className={styles.contacts_value} href='https://t.me/+48571053900'>
+        <a className={styles.contacts_value} href="https://t.me/+48571053900">
           <img
             className={styles.contacts_tgImage}
-            src='/telegram_white.png'
-            alt='telegram'
+            src="/telegram_white.png"
+            alt="telegram"
           />
           <span>+48 571 053 900</span>
         </a>
       </div>
       <div className={styles.contacts_filed}>
         <p className={styles.contacts_label}>{t('contacts.addresLabel')}</p>
-        <p className={styles.contacts_value}>
-        {t('contacts.addresValue')}
-        </p>
+        <p className={styles.contacts_value}>{t('contacts.addresValue')}</p>
       </div>
       <div className={styles.contacts_frame}>
-        <OrderForm />
+        <OrderForm type={'orderForm'} />
       </div>
       <button
         onClick={setIsOpen.on}
         className={styles.contacts_orderBtn}
-        type='button'
+        type="button"
       >
         {t('contacts.orderBtn')}
       </button>
-      <p className={styles.contacts_copyright}>
-        {t('contacts.copyright')}
-      </p>
-      <ModalOrder modalIsOpen={modalIsOpen} closeModal={setIsOpen.off} />
+      <p className={styles.contacts_copyright}>{t('contacts.copyright')}</p>
+      <ModalOrder
+        type={'orderForm'}
+        modalIsOpen={modalIsOpen}
+        closeModal={setIsOpen.off}
+      />
     </div>
   );
 };

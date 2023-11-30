@@ -95,6 +95,11 @@
     a {
       color: #282d32;
       text-decoration: none;
+      transition: $trans-default;
+
+      &:hover {
+        opacity: 0.6;
+      }
     }
 
     @include vp-1439 {

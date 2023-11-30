@@ -4,7 +4,7 @@ import { NameInput, ContactInput, AboutInput } from './components';
 
 import styles from './styles.module.scss';
 
-export const OrderForm = ({ closeModal }) => {
+export const OrderForm = ({ closeModal, type }) => {
   const { t } = useTranslation();
   const [stateForm, setStateForm] = useState({
     name: '',
@@ -35,29 +35,27 @@ export const OrderForm = ({ closeModal }) => {
 
   return (
     <form onSubmit={closeModal} className={styles.orderForm}>
-      <h2 className={styles.orderForm_title}>{t('orderForm.title')}</h2>
-      <p className={styles.orderForm_description}>
-        {t('orderForm.description')}
-      </p>
+      <h2 className={styles.orderForm_title}>{t(`${type}.title`)}</h2>
+      <p className={styles.orderForm_description}>{t(`${type}.description`)}</p>
       <NameInput
         value={stateForm.name}
         change={onNameChange}
-        placeholderText={t('orderForm.placeholderName')}
+        placeholderText={t(`${type}.placeholderName`)}
       />
       <ContactInput
         value={stateForm.conctact}
         change={onContactChange}
-        placeholderText={t('orderForm.placeholderContact')}
+        placeholderText={t(`${type}.placeholderContact`)}
       />
       <AboutInput
         value={stateForm.about}
         change={onAboutChange}
         className={styles.aboutInput}
-        placeholderText={t('orderForm.placeholderProject')}
+        placeholderText={t(`${type}.placeholderProject`)}
       />
-      <p className={styles.orderForm_agreement}>{t('orderForm.agreement')}</p>
-      <button className={styles.orderForm_submitBtn} type='submit'>
-        {t('orderForm.submitBtn')}
+      <p className={styles.orderForm_agreement}>{t(`${type}.agreement`)}</p>
+      <button className={styles.orderForm_submitBtn} type="submit">
+        {t(`${type}.submitBtn`)}
       </button>
     </form>
   );

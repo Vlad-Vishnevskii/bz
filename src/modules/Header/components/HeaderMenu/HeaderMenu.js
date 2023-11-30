@@ -18,7 +18,10 @@ export const HeaderMenu = () => {
   return (
     <>
       <nav className={cn(styles.menu, { [styles.menu_open]: mobileMenuOpen })}>
-        <button onClick={setMobileMenuOpen.off} className={styles.menu_closeBtn}>
+        <button
+          onClick={setMobileMenuOpen.off}
+          className={styles.menu_closeBtn}
+        >
           <CloseIcon />
         </button>
         <ul className={styles.menu_list}>
@@ -34,7 +37,7 @@ export const HeaderMenu = () => {
         <button
           onClick={setIsOpen.on}
           className={styles.menu_submitBtn}
-          type='button'
+          type="button"
         >
           {t('header.orderBtn')}
         </button>
@@ -42,11 +45,15 @@ export const HeaderMenu = () => {
       <button
         onClick={setMobileMenuOpen.on}
         className={styles.burgerBtn}
-        type='button'
+        type="button"
       >
         <BurgerIcon />
       </button>
-      <ModalOrder modalIsOpen={modalIsOpen} closeModal={setIsOpen.off} />
+      <ModalOrder
+        type={'orderForm'}
+        modalIsOpen={modalIsOpen}
+        closeModal={setIsOpen.off}
+      />
     </>
   );
 };

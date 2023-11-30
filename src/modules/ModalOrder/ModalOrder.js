@@ -15,7 +15,7 @@ const handleEnableBodyScroll = () => {
   document.body.style.overflow = 'unset';
 };
 
-export const ModalOrder = ({ modalIsOpen, closeModal }) => {
+export const ModalOrder = ({ modalIsOpen, closeModal, type }) => {
   return (
     <ModalContainer
       isOpen={modalIsOpen}
@@ -28,7 +28,7 @@ export const ModalOrder = ({ modalIsOpen, closeModal }) => {
       <button className={styles.closeICon} onClick={closeModal}>
         <CloseIcon />
       </button>
-      <OrderForm closeModal={closeModal} />
+      <OrderForm closeModal={closeModal} type={type} />
     </ModalContainer>
   );
 };

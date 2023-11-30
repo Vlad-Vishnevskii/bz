@@ -21,6 +21,7 @@ export const HEADER_MENU_ITEMS = [
   {
     id: 4,
     name: 'header.vacancy',
+    href: '/vacancy',
   },
   {
     id: 5,

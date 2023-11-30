@@ -1,4 +1,4 @@
-@import "../../variables.scss";
+@import '../../variables.scss';
 
 .header {
   position: relative;
@@ -22,6 +22,11 @@
 
   &_logo {
     margin-right: 24px;
+    transition: $trans-default;
+
+    &:hover {
+      opacity: 0.6;
+    }
 
     @include vp-1439 {
       margin-left: 13px;

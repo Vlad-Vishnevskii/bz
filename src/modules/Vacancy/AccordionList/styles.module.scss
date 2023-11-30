@@ -1,0 +1,89 @@
+@import '../../../variables.scss';
+
+.accordionList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+
+  &_item {
+    width: 100%;
+  }
+
+  &_button {
+    position: relative;
+    background-color: #ffffff;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    padding-right: 80px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    color: #282d32;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    &::after {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      display: inline-block;
+      content: '';
+      height: 20px;
+      width: 20px;
+      margin-right: 12px;
+      border-bottom: 4px solid currentColor;
+      border-right: 4px solid currentColor;
+      transform: translateY(-50%) rotate(45deg);
+      transition: $trans-default;
+    }
+
+    &[aria-expanded='true']::after,
+    &[aria-selected='true']::after {
+      transform: translateY(-50%) rotate(225deg);
+    }
+  }
+
+  &_panel {
+    background-color: #ffffff;
+    padding: 18px;
+    animation: fadein 0.35s ease;
+    transition: $trans-default;
+  }
+
+  &_orderBtn {
+    display: flex;
+    width: 420px;
+    padding: 20px;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: #eb7d14;
+    color: #ffffff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    border: none;
+    transition: $trans-default;
+
+    &:hover {
+      background: #d66800;
+    }
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
