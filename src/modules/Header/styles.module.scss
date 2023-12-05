@@ -24,8 +24,10 @@
     margin-right: 24px;
     transition: $trans-default;
 
-    &:hover {
-      opacity: 0.6;
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        opacity: 0.6;
+      }
     }
 
     @include vp-1439 {

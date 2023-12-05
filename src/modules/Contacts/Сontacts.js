@@ -41,12 +41,7 @@ export const Contacts = () => {
       <div className={styles.contacts_filed}>
         <p className={styles.contacts_label}>Telegram</p>
         <a className={styles.contacts_value} href="https://t.me/+48571053900">
-          <img
-            className={styles.contacts_tgImage}
-            src="/telegram_white.png"
-            alt="telegram"
-          />
-          <span>+48 571 053 900</span>
+          +48 571 053 900
         </a>
       </div>
       <div className={styles.contacts_filed}>

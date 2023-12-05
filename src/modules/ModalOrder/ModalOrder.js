@@ -12,7 +12,7 @@ const handleDisableBodyScroll = () => {
 };
 
 const handleEnableBodyScroll = () => {
-  document.body.style.overflow = 'unset';
+  document.body.style.overflow = 'initial';
 };
 
 export const ModalOrder = ({ modalIsOpen, closeModal, type }) => {

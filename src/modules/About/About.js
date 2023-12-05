@@ -26,16 +26,24 @@ export const About = () => {
         <Statistic />
         <CooperationModels />
       </div>
-      <TeamSlider/>
+      <TeamSlider />
       <div className={styles.about_container}>
         <p className={styles.about_descriptionBottom}>
           {t('about.description_bottom')}
         </p>
-        <button className={styles.about_orderBtn} onClick={setIsOpen.on} type="button">
+        <button
+          className={styles.about_orderBtn}
+          onClick={setIsOpen.on}
+          type="button"
+        >
           {t('about.orderBtn')}
         </button>
       </div>
-      <ModalOrder modalIsOpen={modalIsOpen} closeModal={setIsOpen.off} />
+      <ModalOrder
+        type={'orderForm'}
+        modalIsOpen={modalIsOpen}
+        closeModal={setIsOpen.off}
+      />
     </div>
   );
 };
