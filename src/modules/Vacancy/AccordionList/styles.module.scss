@@ -6,6 +6,11 @@
   align-items: center;
   width: 100%;
   gap: 20px;
+  max-width: 1080px;
+
+  @include vp-767 {
+    gap: 10px;
+  }
 
   &_item {
     width: 100%;
@@ -16,8 +21,9 @@
     background-color: #ffffff;
     color: #444;
     cursor: pointer;
-    padding: 18px;
-    padding-right: 80px;
+    padding: 20px;
+    padding-right: 100px;
+    padding-left: 39px;
     width: 100%;
     text-align: left;
     border: none;
@@ -27,19 +33,28 @@
     font-weight: 600;
     line-height: normal;
 
+    @include vp-767 {
+      font-size: 24px;
+      padding-left: 19px;
+    }
+
     &::after {
       position: absolute;
-      right: 20px;
+      right: 38px;
       top: 50%;
       display: inline-block;
       content: '';
-      height: 20px;
-      width: 20px;
+      height: 18px;
+      width: 18px;
       margin-right: 12px;
       border-bottom: 4px solid currentColor;
       border-right: 4px solid currentColor;
       transform: translateY(-50%) rotate(45deg);
       transition: $trans-default;
+
+      @include vp-767 {
+        right: 18px;
+      }
     }
 
     &[aria-expanded='true']::after,
@@ -50,14 +65,64 @@
 
   &_panel {
     background-color: #ffffff;
-    padding: 18px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
     animation: fadein 0.35s ease;
     transition: $trans-default;
+
+    @include vp-767 {
+      padding: 20px;
+    }
+
+    p {
+      margin: 0;
+      color: #4c5157;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%;
+
+      @include vp-767 {
+        font-size: 14px;
+      }
+    }
+
+    h3 {
+      color: #282d32;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+
+      @include vp-767 {
+        font-size: 20px;
+      }
+    }
+
+    ul {
+      padding-left: 30px;
+      margin-top: -10px;
+    }
+
+    li {
+      margin-top: 10px;
+      color: #4c5157;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 25.2px */
+
+      @include vp-767 {
+        font-size: 14px;
+      }
+    }
   }
 
   &_orderBtn {
     display: flex;
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
     padding: 20px;
     margin-top: 60px;
     justify-content: center;
@@ -71,6 +136,15 @@
     line-height: 140%;
     border: none;
     transition: $trans-default;
+
+    @include vp-1023 {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include vp-767 {
+      margin-top: 30px;
+    }
 
     &:hover {
       background: #d66800;
