@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -31,8 +31,7 @@ const SliderCard = ({ name, post, photo, description, isActive }) => {
 
 export const TeamSlider = () => {
   const { t } = useTranslation();
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const [swiper, setSwiper] = useState({});
 
   return (
     <div className={styles.teamSlider}>
@@ -41,15 +40,14 @@ export const TeamSlider = () => {
       </h2>
       <Swiper
         modules={[Navigation]}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
         spaceBetween={20}
         slidesPerView={'auto'}
         slidesOffsetBefore={70}
         className={styles.teamSlider_swiper}
         loop={true}
+        onInit={(ev) => {
+          setSwiper(ev);
+        }}
         breakpoints={{
           270: {
             slidesOffsetBefore: 0,
@@ -67,12 +65,17 @@ export const TeamSlider = () => {
             {({ isActive }) => <SliderCard {...item} isActive={isActive} />}
           </SwiperSlide>
         ))}
-
         <div className={styles.teamSlider_navigation}>
-          <button className={styles.teamSlider_leftArrow} ref={prevRef}>
+          <button
+            className={styles.teamSlider_leftArrow}
+            onClick={() => swiper.slidePrev()}
+          >
             <IconArrow />
           </button>
-          <button className={styles.teamSlider_rightArrow} ref={nextRef}>
+          <button
+            className={styles.teamSlider_rightArrow}
+            onClick={() => swiper.slideNext()}
+          >
             <IconArrow />
           </button>
         </div>
