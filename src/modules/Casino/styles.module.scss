@@ -1,6 +1,6 @@
 @import '../../variables.scss';
 
-.casinoProject {
+.casino {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -42,5 +42,40 @@
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
+  }
+
+  &_container {
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+
+  &_section {
+    display: flex;
+    gap: 40px;
+
+    &_1 {
+      margin-top: 80px;
+    }
+  }
+
+  &_textBlock {
+    color: #000000;
+
+    h3 {
+      color: #282d32;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+
+    p {
+      color: #4c5157;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
   }
 }

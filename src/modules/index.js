@@ -9,4 +9,4 @@ export * from './ModalOrder';
 export * from './About';
 export * from './Projects';
 export * from './Vacancy';
-export * from './CasinoProject';
+export * from './Casino';
