@@ -7,7 +7,7 @@ export const PROJECTS_LIST = [
     imgPath: '/images/projects/casino.png',
     imgPathTablet: '/images/projects/casino-tablet.png',
     imgPathMobile: '/images/projects/casino-mobile.png',
-    href: '/',
+    href: '/projects/casino',
     title: 'projects.card-0.title',
     description: 'projects.card-0.description',
   },

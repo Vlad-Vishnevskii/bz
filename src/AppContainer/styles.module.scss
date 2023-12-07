@@ -14,4 +14,15 @@
   &_grey {
     background: #fafafa;
   }
+
+  &_casino {
+    background: #ffffff;
+    background-image: url('./assets/bg-casino-desktop.png');
+    background-repeat: no-repeat;
+    background-size: 100% 637px;
+
+    @include vp-1919 {
+      background-size: 100% 437px;
+    }
+  }
 }

@@ -33,6 +33,20 @@
     transform: translateX(0);
   }
 
+  &_isWhite {
+    .menu_item a {
+      color: #ffffff;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      @include vp-1439 {
+        color: #282d32;
+      }
+    }
+  }
+
   &_closeBtn {
     display: none;
 
@@ -169,5 +183,9 @@
 
   @include vp-1439 {
     display: block;
+  }
+
+  &_white {
+    color: #ffffff;
   }
 }

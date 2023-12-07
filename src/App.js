@@ -7,6 +7,7 @@ import {
   About,
   Projects,
   Vacancy,
+  CasinoProject,
 } from './modules';
 import { AppContainer } from './AppContainer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -24,7 +25,10 @@ function App() {
               <Route path="/technology" element={<Technology />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/about" element={<About />} />
-              <Route path="/projects" element={<Projects />} />
+              <Route path="/projects">
+                <Route index element={<Projects />} />
+                <Route path="casino" element={<CasinoProject />} />
+              </Route>
               <Route path="/vacancy" element={<Vacancy />} />
             </Routes>
           </main>

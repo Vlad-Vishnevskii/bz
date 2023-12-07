@@ -10,14 +10,20 @@ import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
-export const HeaderMenu = () => {
+export const HeaderMenu = ({ isWhite }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useBoolean(false);
   const [modalIsOpen, setIsOpen] = useBoolean(false);
   const { t } = useTranslation();
 
   return (
     <>
-      <nav className={cn(styles.menu, { [styles.menu_open]: mobileMenuOpen })}>
+      <nav
+        className={cn(
+          styles.menu,
+          { [styles.menu_open]: mobileMenuOpen },
+          { [styles.menu_isWhite]: isWhite }
+        )}
+      >
         <button
           onClick={setMobileMenuOpen.off}
           className={styles.menu_closeBtn}
@@ -44,7 +50,7 @@ export const HeaderMenu = () => {
       </nav>
       <button
         onClick={setMobileMenuOpen.on}
-        className={styles.burgerBtn}
+        className={cn(styles.burgerBtn, { [styles.burgerBtn_white]: isWhite })}
         type="button"
       >
         <BurgerIcon />
