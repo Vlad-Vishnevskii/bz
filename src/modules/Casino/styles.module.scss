@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 60px;
   width: 100%;
   color: #ffffff;
 
@@ -14,7 +15,11 @@
     align-items: center;
     max-width: 1080px;
     width: 100%;
-    height: 315px;
+    height: 450px;
+
+    @include vp-1919 {
+      height: 315px;
+    }
   }
 
   &_label {
@@ -28,25 +33,44 @@
   &_title {
     margin: 20px 0;
     color: #ffffff;
-    font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: 130%;
     text-transform: uppercase;
+    font-size: 60px;
+
+    @include vp-1919 {
+      font-size: 48px;
+    }
   }
 
   &_description {
     color: #ffffff;
     text-align: center;
-    font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
+    font-size: 24px;
+
+    @include vp-1919 {
+      font-size: 18px;
+    }
   }
 
   &_container {
     margin: 0 auto;
     max-width: 1300px;
+  }
+
+  &_containerGrey {
+    width: 100%;
+    background: #fafafa;
+    padding: 60px 0;
+
+    &_padding {
+      margin: 0 auto;
+      max-width: 1300px;
+    }
   }
 
   &_section {
@@ -55,6 +79,23 @@
 
     &_1 {
       margin-top: 80px;
+    }
+
+    &_2 {
+      flex-direction: row-reverse;
+      margin: 0 auto;
+      max-width: 1300px;
+    }
+
+    &_4 {
+      flex-direction: row;
+      margin: 0 auto;
+      max-width: 1300px;
+    }
+
+    &_5 {
+      flex-direction: row-reverse;
+      padding: 20px 90px;
     }
   }
 
@@ -77,5 +118,65 @@
       font-weight: 400;
       line-height: 150%;
     }
+  }
+
+  &_bottomTitle {
+    color: #282d32;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &_bottomDescription {
+    color: #4c5157;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  &_statistic {
+    display: grid;
+    grid-template-columns: repeat(3, 319px);
+    color: #000000;
+    gap: 62px;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 60px;
+  }
+
+  &_statisticHeader {
+    color: #eb7d14;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
+
+  &_statisticBottom {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+    align-items: center;
+  }
+
+  &_statisticValue {
+    color: #282d32;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+  &_statisticBullet {
+    width: 8px;
+    height: 8px;
+    background: #eb7d14;
+    border-radius: 50%;
   }
 }

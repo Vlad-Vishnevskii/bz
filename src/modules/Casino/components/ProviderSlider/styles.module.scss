@@ -1,0 +1,17 @@
+@import '../../../../variables.scss';
+
+.providerSlider {
+  width: 100%;
+  color: #000000;
+  margin-top: 40px;
+
+  :global(.swiper-slide) {
+    width: 33px;
+    height: 33px;
+
+    @include vp-767 {
+      //   width: 314px;
+      //   height: 406px;
+    }
+  }
+}
