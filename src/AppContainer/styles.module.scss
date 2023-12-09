@@ -24,5 +24,15 @@
     @include vp-1919 {
       background-size: 100% 437px;
     }
+
+    @media (max-width: 850px) {
+      background-image: url('./assets/bg-casino-tablet.png');
+      background-size: 100% 422px;
+    }
+
+    @include vp-500 {
+      background-image: url('./assets/bg-casino-mobile.png');
+      background-size: 100% 442px;
+    }
   }
 }

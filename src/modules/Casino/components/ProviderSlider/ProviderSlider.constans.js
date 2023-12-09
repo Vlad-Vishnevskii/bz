@@ -1,82 +1,83 @@
 export const PROVIDER_DATA = [
   {
-    id: 0,
     path: '/images/casino/providers/gamzix.png',
   },
   {
-    id: 1,
     path: '/images/casino/providers/spribe.png',
   },
   {
-    id: 0,
     path: '/images/casino/providers/pragmatic.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/go.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/endorpthina.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/spinomenal.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/igrosoft.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/redtiger.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/playson.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/three.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/netent.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/evolution.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/nolimits.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/bigtime.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/ygg.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/betsoft.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/bgaming.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/swintt.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/amusnet.png',
   },
   {
-    id: 0,
-    path: '/images/casino/providers/gamzix.png',
+    path: '/images/casino/providers/gameart.png',
+  },
+  {
+    path: '/images/casino/providers/mascot.png',
+  },
+  {
+    path: '/images/casino/providers/thunder.png',
+  },
+  {
+    path: '/images/casino/providers/ezugi.png',
+  },
+  {
+    path: '/images/casino/providers/hacksaw.png',
+  },
+  {
+    path: '/images/casino/providers/amatic.png',
+  },
+  {
+    path: '/images/casino/providers/evoplay.png',
+  },
+  {
+    path: '/images/casino/providers/push.png',
   },
 ];

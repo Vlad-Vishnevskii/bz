@@ -24,10 +24,12 @@ export const Casino = () => {
           />
           <div className={styles.casino_textBlock}>
             <h3>{t('casino.screen1.title')}</h3>
-            <Trans
-              i18nKey={'casino.screen1.description'}
-              components={{ p: <p /> }}
-            />
+            <article>
+              <Trans
+                i18nKey={'casino.screen1.description'}
+                components={{ p: <p /> }}
+              />
+            </article>
           </div>
         </div>
       </div>
@@ -37,10 +39,12 @@ export const Casino = () => {
           <img src="/images/casino/screen-2.png" alt="Ставки на спорт" />
           <div className={styles.casino_textBlock}>
             <h3>{t('casino.screen2.title')}</h3>
-            <Trans
-              i18nKey={'casino.screen2.description'}
-              components={{ p: <p /> }}
-            />
+            <article>
+              <Trans
+                i18nKey={'casino.screen2.description'}
+                components={{ p: <p /> }}
+              />
+            </article>
           </div>
         </div>
       </div>
@@ -49,10 +53,12 @@ export const Casino = () => {
           <img src="/images/casino/screen-3.png" alt="Финансовые операции" />
           <div className={styles.casino_textBlock}>
             <h3>{t('casino.screen3.title')}</h3>
-            <Trans
-              i18nKey={'casino.screen3.description'}
-              components={{ p: <p /> }}
-            />
+            <article>
+              <Trans
+                i18nKey={'casino.screen3.description'}
+                components={{ p: <p /> }}
+              />
+            </article>
           </div>
         </div>
       </div>
@@ -64,10 +70,12 @@ export const Casino = () => {
           />
           <div className={styles.casino_textBlock}>
             <h3>{t('casino.screen4.title')}</h3>
-            <Trans
-              i18nKey={'casino.screen4.description'}
-              components={{ p: <p /> }}
-            />
+            <article>
+              <Trans
+                i18nKey={'casino.screen4.description'}
+                components={{ p: <p /> }}
+              />
+            </article>
           </div>
         </div>
       </div>
@@ -86,10 +94,12 @@ export const Casino = () => {
           />
           <div className={styles.casino_textBlock}>
             <h3>{t('casino.screen5.title')}</h3>
-            <Trans
-              i18nKey={'casino.screen5.description'}
-              components={{ p: <p /> }}
-            />
+            <article>
+              <Trans
+                i18nKey={'casino.screen5.description'}
+                components={{ p: <p /> }}
+              />
+            </article>
           </div>
         </div>
       </div>

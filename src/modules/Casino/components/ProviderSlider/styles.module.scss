@@ -3,15 +3,14 @@
 .providerSlider {
   width: 100%;
   color: #000000;
-  margin-top: 40px;
+  margin-top: -25px;
+
+  @include vp-1023 {
+    display: none;
+  }
 
   :global(.swiper-slide) {
     width: 33px;
     height: 33px;
-
-    @include vp-767 {
-      //   width: 314px;
-      //   height: 406px;
-    }
   }
 }
