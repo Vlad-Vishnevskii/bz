@@ -11,6 +11,11 @@
     margin-top: 65px;
   }
 
+  @include vp-767 {
+    margin-top: 50px;
+    gap: 143px;
+  }
+
   &_item {
     display: flex;
     align-items: center;
@@ -42,5 +47,11 @@
   &_iconRight {
     display: flex;
     align-items: center;
+  }
+
+  span {
+    @include vp-767 {
+      display: none;
+    }
   }
 }

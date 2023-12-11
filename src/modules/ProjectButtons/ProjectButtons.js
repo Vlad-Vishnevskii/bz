@@ -25,7 +25,7 @@ export const ProjectButtons = ({
         <div className={styles.projectButtons_iconLeft}>
           <IconArrow />
         </div>
-        {t('projectButtons.left')}
+        <span>{t('projectButtons.left')}</span>
       </Link>
       <Link
         to={rightHref}
@@ -33,7 +33,7 @@ export const ProjectButtons = ({
           [styles.projectButtons_item_disabled]: rightDisabled,
         })}
       >
-        {t('projectButtons.right')}
+        <span>{t('projectButtons.right')}</span>
         <div className={styles.projectButtons_iconRight}>
           <IconArrow />
         </div>
