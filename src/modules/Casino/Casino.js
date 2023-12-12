@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import cn from 'classnames';
 import { ProviderSlider } from './components/ProviderSlider/ProviderSlider';
@@ -8,6 +8,10 @@ import styles from './styles.module.scss';
 
 export const Casino = () => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className={styles.casino}>

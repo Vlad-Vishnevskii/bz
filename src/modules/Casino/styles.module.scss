@@ -180,6 +180,10 @@
       margin-top: 20px;
       gap: 35px;
 
+      img {
+        image-rendering: pixelated;
+      }
+
       @include vp-1439 {
         flex-direction: column-reverse;
         max-width: 820px;

@@ -17,9 +17,9 @@
   }
 
   @include vp-767 {
-    margin-top: 61px;
+    margin-top: 37px;
     padding-left: 10px;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: initial;
     align-items: flex-start;
     gap: 0;

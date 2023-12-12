@@ -14,6 +14,8 @@
   min-width: 56px;
   text-transform: capitalize;
   margin-left: auto;
+  opacity: 0; // временное скрытие
+  pointer-events: none; // временное скрытие
 
   &:hover {
     color: #d66800;

@@ -22,19 +22,19 @@ export const ProviderSlider = () => {
       }}
       breakpoints={{
         1024: {
-          spaceBetween: 60,
+          spaceBetween: 20,
         },
         1919: {
-          spaceBetween: 100,
+          spaceBetween: 40,
         },
         2500: {
-          spaceBetween: 150,
+          spaceBetween: 55,
         },
       }}
     >
       {PROVIDER_DATA.map((item, index) => (
         <SwiperSlide key={index}>
-          <img src={item.path} width={33} height={33} alt="provider" />
+          <img src={item.path} alt="provider" />
         </SwiperSlide>
       ))}
     </Swiper>
