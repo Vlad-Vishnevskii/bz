@@ -1,83 +1,110 @@
 export const PROVIDER_DATA = [
   {
-    path: '/images/casino/providers/gamzix.png',
+    name: 'gamzix',
+    path: '/images/casino/providers/tipe=gamzix.svg',
   },
   {
-    path: '/images/casino/providers/spribe.png',
+    name: 'spribe',
+    path: '/images/casino/providers/tipe=spribe.svg',
   },
   {
-    path: '/images/casino/providers/pragmatic.png',
+    name: 'pragmatic',
+    path: '/images/casino/providers/tipe=pragmatic.svg',
   },
   {
-    path: '/images/casino/providers/go.png',
+    name: 'go',
+    path: '/images/casino/providers/tipe=go.svg',
   },
   {
-    path: '/images/casino/providers/endorpthina.png',
+    name: 'endorpthina',
+    path: '/images/casino/providers/tipe=endorpthina.svg',
   },
   {
-    path: '/images/casino/providers/spinomenal.png',
+    name: 'spinomenal',
+    path: '/images/casino/providers/tipe=spinomenal.svg',
   },
   {
-    path: '/images/casino/providers/igrosoft.png',
+    name: 'igrosoft',
+    path: '/images/casino/providers/tipe=igrosoft.svg',
   },
   {
-    path: '/images/casino/providers/redtiger.png',
+    name: 'redtiger',
+    path: '/images/casino/providers/tipe=redtiger.svg',
   },
   {
-    path: '/images/casino/providers/playson.png',
+    name: 'playson',
+    path: '/images/casino/providers/tipe=playson.svg',
   },
   {
-    path: '/images/casino/providers/three.png',
+    name: 'three',
+    path: '/images/casino/providers/tipe=three.svg',
   },
   {
-    path: '/images/casino/providers/netent.png',
+    name: 'netent',
+    path: '/images/casino/providers/tipe=netent.svg',
   },
   {
-    path: '/images/casino/providers/evolution.png',
+    name: 'evolution',
+    path: '/images/casino/providers/tipe=evolution.svg',
   },
   {
-    path: '/images/casino/providers/nolimits.png',
+    name: 'nolimits',
+    path: '/images/casino/providers/tipe=nolimits.svg',
   },
   {
-    path: '/images/casino/providers/bigtime.png',
+    name: 'bigtime',
+    path: '/images/casino/providers/tipe=bigtime.svg',
   },
   {
-    path: '/images/casino/providers/ygg.png',
+    name: 'ygg',
+    path: '/images/casino/providers/tipe=ygg.svg',
   },
   {
-    path: '/images/casino/providers/betsoft.png',
+    name: 'betsoft',
+    path: '/images/casino/providers/tipe=betsoft.svg',
   },
   {
-    path: '/images/casino/providers/bgaming.png',
+    name: 'bgaming',
+    path: '/images/casino/providers/tipe=bgaming.svg',
   },
   {
-    path: '/images/casino/providers/swintt.png',
+    name: 'swintt',
+    path: '/images/casino/providers/tipe=swintt.svg',
   },
   {
-    path: '/images/casino/providers/amusnet.png',
+    name: 'amusnet',
+    path: '/images/casino/providers/tipe=amusnet.svg',
   },
   {
-    path: '/images/casino/providers/gameart.png',
+    name: 'gameart',
+    path: '/images/casino/providers/tipe=gameart.svg',
   },
   {
-    path: '/images/casino/providers/mascot.png',
+    name: 'mascot',
+    path: '/images/casino/providers/tipe=mascot.svg',
   },
   {
-    path: '/images/casino/providers/thunder.png',
+    name: 'thunder',
+    path: '/images/casino/providers/tipe=thunder.svg',
   },
   {
-    path: '/images/casino/providers/ezugi.png',
+    name: 'ezugi',
+    path: '/images/casino/providers/tipe=ezugi.svg',
   },
   {
-    path: '/images/casino/providers/hacksaw.png',
+    name: 'hacksaw',
+    path: '/images/casino/providers/tipe=hacksaw.svg',
   },
   {
-    path: '/images/casino/providers/amatic.png',
+    name: 'amatic',
+    path: '/images/casino/providers/tipe=amatic.svg',
   },
   {
-    path: '/images/casino/providers/evoplay.png',
+    name: 'evoplay',
+    path: '/images/casino/providers/tipe=evoplay.svg',
   },
   {
-    path: '/images/casino/providers/push.png',
+    name: 'push',
+    path: '/images/casino/providers/tipe=push.svg',
   },
 ];

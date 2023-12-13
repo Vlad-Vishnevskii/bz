@@ -34,7 +34,10 @@ export const ProviderSlider = () => {
     >
       {PROVIDER_DATA.map((item, index) => (
         <SwiperSlide key={index}>
-          <img src={item.path} alt="provider" />
+          <div className={styles.providerSlider_card}>
+            <img src={item.path} alt="provider" />
+            <div className={styles.providerSlider_name}>{item.name}</div>
+          </div>
         </SwiperSlide>
       ))}
     </Swiper>

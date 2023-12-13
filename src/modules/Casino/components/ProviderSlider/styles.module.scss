@@ -12,4 +12,22 @@
   :global(.swiper-slide) {
     width: fit-content;
   }
+
+  &_card {
+    display: inline-flex;
+    padding: 10px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 20px;
+    background: #fafafa;
+  }
+
+  &_name {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    text-transform: capitalize;
+  }
 }

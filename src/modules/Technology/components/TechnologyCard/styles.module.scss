@@ -5,8 +5,36 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+
   overflow: hidden;
+
+  &_imgFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 244px;
+    height: 244px;
+    background: #ffffff;
+    padding: 45px;
+
+    @include vp-1439 {
+      width: 194px;
+      height: 194px;
+      padding: 30px;
+    }
+
+    @include vp-767 {
+      width: 164px;
+      height: 164px;
+      padding: 24px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 
   &_name {
     margin: 0;
@@ -21,11 +49,5 @@
     @include vp-767 {
       font-size: 14px;
     }
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
   }
 }
