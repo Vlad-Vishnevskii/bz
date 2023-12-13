@@ -8,6 +8,10 @@ import styles from './styles.module.scss';
 
 export const About = () => {
   const [modalIsOpen, setIsOpen] = useBoolean(false);
+  const openModal = () => {
+    setIsOpen.on();
+    window.scrollTo(0, 0);
+  };
   const { t } = useTranslation();
 
   return (
@@ -33,7 +37,7 @@ export const About = () => {
           </p>
           <button
             className={styles.about_orderBtn}
-            onClick={setIsOpen.on}
+            onClick={openModal}
             type="button"
           >
             {t('about.orderBtn')}

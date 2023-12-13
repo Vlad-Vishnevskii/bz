@@ -16,6 +16,10 @@ import styles from './styles.module.scss';
 export const AccordionList = () => {
   const { t } = useTranslation();
   const [modalIsOpen, setIsOpen] = useBoolean(false);
+  const openModal = () => {
+    setIsOpen.on();
+    window.scrollTo(0, 0);
+  };
 
   return (
     <Accordion className={styles.accordionList} allowZeroExpanded>
@@ -48,7 +52,7 @@ export const AccordionList = () => {
             </ul>
             <button
               type="button"
-              onClick={setIsOpen.on}
+              onClick={openModal}
               className={styles.accordionList_orderBtn}
             >
               {t('vacancy.orderBtn')}

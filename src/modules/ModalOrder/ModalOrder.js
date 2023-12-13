@@ -8,11 +8,11 @@ import styles from './styles.module.scss';
 ModalContainer.setAppElement('#root');
 
 const handleDisableBodyScroll = () => {
-  document.body.style.overflow = 'hidden';
+  document.body.style.position = 'relative';
 };
 
 const handleEnableBodyScroll = () => {
-  document.body.style.overflow = 'initial';
+  document.body.style.position = 'auto';
 };
 
 export const ModalOrder = ({ modalIsOpen, closeModal, type }) => {
