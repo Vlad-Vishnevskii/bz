@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 //import cn from 'classnames';
 import logo from '../../assets/logo.svg';
 import whiteLogo from '../../assets/white-logo.svg';
