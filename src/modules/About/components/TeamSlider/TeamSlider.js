@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { IconArrow } from './assets/IconArrow';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import { TEAM_LIST } from './TeamSlider.constans';
 
 import styles from './styles.module.scss';
@@ -39,7 +39,7 @@ export const TeamSlider = () => {
         {t('about.team_slider.title')}
       </h2>
       <Swiper
-        modules={[Navigation]}
+        modules={[Autoplay, Navigation]}
         spaceBetween={20}
         slidesPerView={'auto'}
         slidesOffsetBefore={70}
@@ -47,6 +47,10 @@ export const TeamSlider = () => {
         loop={true}
         onInit={(ev) => {
           setSwiper(ev);
+        }}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: true,
         }}
         breakpoints={{
           270: {

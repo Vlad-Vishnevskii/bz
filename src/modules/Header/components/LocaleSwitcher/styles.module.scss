@@ -70,6 +70,8 @@
     position: absolute;
     left: 22px;
     bottom: 57px;
+    opacity: 0; // временное скрытие
+    pointer-events: none; // временное скрытие
   }
 
   @include vp-767 {

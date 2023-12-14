@@ -10,10 +10,27 @@ import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
-export const HeaderMenu = ({ isWhite }) => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useBoolean(false);
+export const HeaderMenu = ({
+  isWhite,
+  mobileMenuOpen,
+  setMobileMenuOpen,
+  setStyle,
+}) => {
   const [modalIsOpen, setIsOpen] = useBoolean(false);
   const { t } = useTranslation();
+
+  const openMenu = () => {
+    setMobileMenuOpen.on();
+    setStyle({ backdropFilter: 'none' });
+  };
+  const closeMenu = () => {
+    setTimeout(() => {
+      setMobileMenuOpen.off();
+    }, 250);
+    setTimeout(() => {
+      setStyle({ backdropFilter: 'blur(5px)' });
+    }, 650);
+  };
 
   return (
     <>
@@ -24,16 +41,13 @@ export const HeaderMenu = ({ isWhite }) => {
           { [styles.menu_isWhite]: isWhite }
         )}
       >
-        <button
-          onClick={setMobileMenuOpen.off}
-          className={styles.menu_closeBtn}
-        >
+        <button onClick={closeMenu} className={styles.menu_closeBtn}>
           <CloseIcon />
         </button>
         <ul className={styles.menu_list}>
           {HEADER_MENU_ITEMS.map((item) => (
             <li className={styles.menu_item} key={item.id}>
-              <Link onClick={setMobileMenuOpen.off} to={item?.href}>
+              <Link onClick={closeMenu} to={item?.href}>
                 {t(item.name)}
               </Link>
             </li>
@@ -49,7 +63,7 @@ export const HeaderMenu = ({ isWhite }) => {
         </button>
       </nav>
       <button
-        onClick={setMobileMenuOpen.on}
+        onClick={openMenu}
         className={cn(styles.burgerBtn, { [styles.burgerBtn_white]: isWhite })}
         type="button"
       >

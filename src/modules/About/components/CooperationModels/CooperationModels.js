@@ -15,7 +15,9 @@ export const CooperationModels = () => {
       <ul className={styles.cooperationModels_list}>
         {COOPERATION_MODELS_LIST.map((item) => (
           <li className={styles.cooperationModels_item} key={item.id}>
-            <img src={item.img} alt="icon"/>
+            <div className={styles.cooperationModels_iconFrame}>
+              <img src={item.img} alt="icon" />
+            </div>
             <span>{t(item.name)}</span>
           </li>
         ))}

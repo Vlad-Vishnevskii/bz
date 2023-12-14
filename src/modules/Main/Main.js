@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import { SliderCard } from './components/sliderCard';
 import ellipseBg from '../../assets/ellipse-bg.png';
 import { getSliderData } from './Main.helpers';
@@ -30,9 +30,13 @@ export const Main = () => {
         />
       </div>
       <Swiper
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         pagination={pagination}
         className={styles.swiper}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: true,
+        }}
       >
         {sliderData.map((item) => (
           <SwiperSlide key={item.id}>

@@ -17,8 +17,8 @@ export const ProviderSlider = () => {
       className={styles.providerSlider}
       loop={true}
       autoplay={{
-        delay: 2000,
-        disableOnInteraction: false,
+        delay: 3000,
+        disableOnInteraction: true,
       }}
       breakpoints={{
         1024: {
