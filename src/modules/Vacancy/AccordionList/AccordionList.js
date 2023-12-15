@@ -16,6 +16,7 @@ import styles from './styles.module.scss';
 export const AccordionList = () => {
   const { t } = useTranslation();
   const [modalIsOpen, setIsOpen] = useBoolean(false);
+
   const openModal = () => {
     setIsOpen.on();
     window.scrollTo(0, 0);
@@ -23,8 +24,8 @@ export const AccordionList = () => {
 
   return (
     <Accordion className={styles.accordionList} allowZeroExpanded>
-      {VACANCY_LIST.map((item) => (
-        <AccordionItem className={styles.accordionList_item}>
+      {VACANCY_LIST.map((item, index) => (
+        <AccordionItem key={index} className={styles.accordionList_item}>
           <AccordionItemHeading>
             <AccordionItemButton className={styles.accordionList_button}>
               {item.name}
@@ -34,20 +35,20 @@ export const AccordionList = () => {
             <p>{item.description}</p>
             <h3>{t('vacancy.duties')}</h3>
             <ul>
-              {item.duties.map((duty) => (
-                <li>{duty}</li>
+              {item.duties.map((duty, index) => (
+                <li key={index}>{duty}</li>
               ))}
             </ul>
             <h3>{t('vacancy.requirements')}</h3>
             <ul>
-              {item.requirements.map((requirement) => (
-                <li>{requirement}</li>
+              {item.requirements.map((requirement, index) => (
+                <li key={index}>{requirement}</li>
               ))}
             </ul>
             <h3>{t('vacancy.conditions')}</h3>
             <ul>
-              {item.conditions.map((condition) => (
-                <li>{condition}</li>
+              {item.conditions.map((condition, index) => (
+                <li key={index}>{condition}</li>
               ))}
             </ul>
             <button

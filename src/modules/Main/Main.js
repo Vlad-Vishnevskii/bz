@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { SliderCard } from './components/sliderCard';
@@ -17,6 +17,10 @@ export const Main = () => {
       return '<span class="' + className + '">' + (index + 1) + '</span>';
     },
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className={styles.main}>

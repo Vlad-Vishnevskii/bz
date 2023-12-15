@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ellipse from '../../assets/ellipse-bg.png';
 import { OrderForm } from '../OrderForm';
 import { useBoolean } from '../../hooks';
@@ -10,6 +10,10 @@ import styles from './styles.module.scss';
 export const Contacts = () => {
   const [modalIsOpen, setIsOpen] = useBoolean(false);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className={styles.contacts}>

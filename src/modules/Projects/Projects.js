@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ProjectCard } from './components';
 import { PROJECTS_LIST } from './Projects.constans';
@@ -7,6 +7,10 @@ import styles from './styles.module.scss';
 
 export const Projects = () => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className={styles.projects}>

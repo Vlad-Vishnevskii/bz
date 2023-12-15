@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-//import cn from 'classnames';
 import logo from '../../assets/logo.svg';
 import whiteLogo from '../../assets/white-logo.svg';
 import { Link, useLocation } from 'react-router-dom';

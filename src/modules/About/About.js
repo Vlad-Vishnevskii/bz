@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useBoolean } from '../../hooks';
 import { ModalOrder } from '../ModalOrder';
 import { useTranslation, Trans } from 'react-i18next';
@@ -13,6 +13,10 @@ export const About = () => {
     window.scrollTo(0, 0);
   };
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
