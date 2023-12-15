@@ -32,7 +32,7 @@ export const ProjectCard = ({
         <img src={imgPath} alt={t(title)} />
       </picture>
       <div className={styles.projectCard_textContainer}>
-        <p className={styles.projectCard_label}>{t('projects.title')}</p>
+        {/* <p className={styles.projectCard_label}>{t('projects.title')}</p> */}
         <h3 className={styles.projectCard_title}>{t(title)}</h3>
         <p className={styles.projectCard_description}>{t(description)}</p>
         <Link className={styles.projectCard_link} to={href}>

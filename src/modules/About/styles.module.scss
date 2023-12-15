@@ -4,11 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 45px;
-
-  @include vp-1023 {
-    padding-bottom: 17px;
-  }
 
   * {
     box-sizing: border-box;

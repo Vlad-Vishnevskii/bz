@@ -1,5 +1,11 @@
 @import '../../variables.scss';
 
+.footerWrapper {
+  border-top: 1px solid#e3e4e6;
+  background: #fafafa;
+  margin-top: 40px;
+}
+
 .footer {
   display: grid;
   grid-template-columns: 1fr 140px 140px 140px;
@@ -8,7 +14,7 @@
   align-items: center;
   margin: 0 auto;
   max-width: 1440px;
-  padding: 42px 76px;
+  padding: 28px 76px;
 
   @include vp-1439 {
     width: 100%;
@@ -18,7 +24,7 @@
   }
 
   @include vp-767 {
-    padding: 41px 16px;
+    padding: 16px;
     padding-bottom: 30px;
     grid-template-columns: 1fr 140px;
     grid-template-rows: auto auto auto auto;

@@ -7,9 +7,11 @@
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
+  padding-bottom: 20px;
 
   @include vp-1439 {
     max-width: 800px;
+    padding-bottom: 0;
   }
 
   @include vp-1023 {

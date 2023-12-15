@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 
 .main {
-  min-height: 766px;
+  min-height: 737px;
   padding-top: 88px;
   width: 100%;
 
@@ -51,8 +51,7 @@
     }
 
     :global(.swiper-pagination-bullets) {
-      left: -14px;      
-
+      left: -14px;
     }
 
     :global(.swiper-pagination-bullet) {
