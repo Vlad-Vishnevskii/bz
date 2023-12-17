@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 export const Header = () => {
   const { pathname } = useLocation();
   const isCasinoPage = pathname.includes(CASINO_BG_PAGE);
-  const currentLogo = isCasinoPage ? whiteLogo : logo;
+  //const currentLogo = isCasinoPage ? whiteLogo : logo;
 
   return (
     <>

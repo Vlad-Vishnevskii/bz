@@ -38,7 +38,7 @@ export const Main = () => {
         pagination={pagination}
         className={styles.swiper}
         autoplay={{
-          delay: 4000,
+          delay: 7000,
           disableOnInteraction: true,
         }}
       >
