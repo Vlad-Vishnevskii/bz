@@ -20,19 +20,23 @@
     background-image: url('./assets/bg-casino-desktop.png');
     background-repeat: no-repeat;
     background-size: 100% 610px;
+    background-position-y: 81px;
 
     @include vp-1919 {
       background-size: 100% 437px;
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 1023px) {
       background-image: url('./assets/bg-casino-tablet.png');
-      background-size: 100% 422px;
+      background-size: 100% 332px;
+    }
+
+    @include vp-767 {
+      background-position-y: 81px;
     }
 
     @include vp-500 {
       background-image: url('./assets/bg-casino-mobile.png');
-      background-size: 100% 442px;
     }
   }
 }

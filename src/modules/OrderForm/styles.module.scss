@@ -5,14 +5,9 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1079px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px;
   height: auto;
-
-  @include vp-1439 {
-    padding: 40px;
-  }
 
   @include vp-1023 {
     padding: 40px 70px;
@@ -73,7 +68,7 @@
     width: 100%;
     height: 65px;
     padding: 20px 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border: none;
     border-bottom: 2px solid #9b9b9b;
     outline: none;
@@ -164,17 +159,19 @@
   }
 
   &_agreement {
-    margin-top: 0;
-    color: #e3e4e6;
-    font-size: 18px;
+    margin-top: 20px;
+    color: #9b9b9b;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 140%;
     text-align: center;
+    padding: 0 45px;
 
     @include vp-1023 {
       text-align: left;
       align-self: flex-start;
+      padding: 0;
     }
 
     @include vp-767 {
@@ -184,7 +181,7 @@
   }
 
   &_submitBtn {
-    margin-top: 50px;
+    margin-top: 46px;
     display: flex;
     width: 420px;
     padding: 20px;

@@ -14,6 +14,10 @@ export const HeaderMenu = ({ isWhite }) => {
   const [modalIsOpen, setIsOpen] = useBoolean(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useBoolean(false);
   const { t } = useTranslation();
+  const openModal = () => {
+    setIsOpen.on();
+    window.scrollTo(0, 0);
+  };
 
   return (
     <>
@@ -41,7 +45,7 @@ export const HeaderMenu = ({ isWhite }) => {
         </ul>
         <LocaleSwitcher />
         <button
-          onClick={setIsOpen.on}
+          onClick={openModal}
           className={styles.menu_submitBtn}
           type="button"
         >

@@ -38,12 +38,15 @@ export const Main = () => {
         pagination={pagination}
         className={styles.swiper}
         autoplay={{
-          delay: 7000,
+          delay: 4000,
           disableOnInteraction: true,
         }}
       >
         {sliderData.map((item) => (
-          <SwiperSlide key={item.id}>
+          <SwiperSlide
+            key={item.id}
+            data-swiper-autoplay={item.id === 1 ? '17000' : '4000'}
+          >
             <SliderCard {...item} />
           </SwiperSlide>
         ))}
