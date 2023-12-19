@@ -47,13 +47,13 @@
 
 .headerPadding {
   width: 100%;
-  height: 124px;
+  height: 85px;
 
   @include vp-1439 {
     height: 82px;
   }
 
   @include vp-767 {
-    height: 105px;
+    height: 89px;
   }
 }

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
 import { NameInput, ContactInput, AboutInput } from './components';
 
 import styles from './styles.module.scss';
 
-export const OrderForm = ({ closeModal, type }) => {
+export const OrderForm = ({ closeModal, type, forContactsFrame }) => {
   const { t } = useTranslation();
   const [stateForm, setStateForm] = useState({
     name: '',
@@ -34,9 +35,22 @@ export const OrderForm = ({ closeModal, type }) => {
   };
 
   return (
-    <form onSubmit={closeModal} className={styles.orderForm}>
-      <h2 className={styles.orderForm_title}>{t(`${type}.title`)}</h2>
-      <p className={styles.orderForm_description}>{t(`${type}.description`)}</p>
+    <form
+      onSubmit={closeModal}
+      className={cn(styles.orderForm, {
+        [styles.orderFormForContactFrame]: forContactsFrame,
+      })}
+    >
+      {!forContactsFrame && (
+        <h2 className={styles.orderForm_title}>{t(`${type}.title`)}</h2>
+      )}
+      <p
+        className={cn(styles.orderForm_description, {
+          [styles.orderForm_descriptionOrange]: forContactsFrame,
+        })}
+      >
+        {t(`${type}.description`)}
+      </p>
       <NameInput
         value={stateForm.name}
         change={onNameChange}

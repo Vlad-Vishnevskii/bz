@@ -15,7 +15,7 @@ export const Projects = () => {
   return (
     <div className={styles.projects}>
       <h1 className={styles.projects_title}>{t('projects.title')}</h1>
-      <p className={styles.projects_description}>{t('projects.description')}</p>
+      {/* <p className={styles.projects_description}>{t('projects.description')}</p> */}
       <ul className={styles.projects_list}>
         {PROJECTS_LIST.map((item) => (
           <ProjectCard key={item.id} {...item} />
