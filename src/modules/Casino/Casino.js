@@ -15,10 +15,11 @@ export const Casino = () => {
 
   return (
     <div className={styles.casino}>
-      <div className={styles.casino_header}>
-        {/* <p className={styles.casino_label}>{t('casino.label')}</p> */}
-        <h1 className={styles.casino_title}>{t('casino.title')}</h1>
-        <p className={styles.casino_description}>{t('casino.description')}</p>
+      <div className={styles.casino_headerWrapper}>
+        <div className={styles.casino_header}>
+          <h1 className={styles.casino_title}>{t('casino.title')}</h1>
+          <p className={styles.casino_description}>{t('casino.description')}</p>
+        </div>
       </div>
       <div className={styles.casino_container}>
         <div className={cn(styles.casino_section, styles.casino_section_1)}>

@@ -17,26 +17,26 @@
 
   &_casino {
     background: #ffffff;
-    background-image: url('./assets/bg-casino-desktop.png');
-    background-repeat: no-repeat;
-    background-size: 100% 610px;
-    background-position-y: 65px;
+    // background-image: url('./assets/bg-casino-desktop.png');
+    // background-repeat: no-repeat;
+    // background-size: 100% 610px;
+    // background-position-y: 65px;
 
-    @include vp-1919 {
-      background-size: 100% 345px;
-    }
+    // @include vp-1919 {
+    //   background-size: 100% 345px;
+    // }
 
-    @media (max-width: 1439px) {
-      background-position-y: 60px;
-    }
+    // @media (max-width: 1439px) {
+    //   background-position-y: 60px;
+    // }
 
-    @media (max-width: 1023px) {
-      background-image: url('./assets/bg-casino-tablet.png');
-      background-size: 100% 320px;
-    }
+    // @media (max-width: 1023px) {
+    //   background-image: url('./assets/bg-casino-tablet.png');
+    //   background-size: 100% 320px;
+    // }
 
-    @include vp-500 {
-      background-image: url('./assets/bg-casino-mobile.png');
-    }
+    // @include vp-500 {
+    //   background-image: url('./assets/bg-casino-mobile.png');
+    // }
   }
 }
