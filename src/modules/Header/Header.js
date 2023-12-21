@@ -19,8 +19,8 @@ export const Header = () => {
         })}
       >
         <header className={styles.header}>
-          <Link to="/">
-            <img className={styles.header_logo} src={logo} alt="BISONIX" />
+          <Link className={styles.header_logo} to="/">
+            <img src={logo} alt="BISONIX" />
           </Link>
           <HeaderMenu />
         </header>

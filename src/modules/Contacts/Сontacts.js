@@ -10,6 +10,9 @@ import styles from './styles.module.scss';
 export const Contacts = () => {
   const [modalIsOpen, setIsOpen] = useBoolean(false);
   const { t } = useTranslation();
+  const onSubmitForm = (e) => {
+    e.preventDefault();
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -59,7 +62,11 @@ export const Contacts = () => {
           </div>
         </div>
         <div className={styles.contacts_formWrapper}>
-          <OrderForm type={'orderForm'} forContactsFrame />
+          <OrderForm
+            type={'orderForm'}
+            forContactsFrame
+            closeModal={onSubmitForm}
+          />
         </div>
       </div>
       <button

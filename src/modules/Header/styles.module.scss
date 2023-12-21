@@ -7,16 +7,16 @@
   align-items: center;
   margin: 0 auto;
   max-width: 1440px;
-  padding: 20px 70px;
+  padding: 10px 70px;
 
   @include vp-1439 {
     width: 100%;
-    padding: 17px 68px;
+    padding: 8px 68px;
     justify-content: space-between;
   }
 
   @include vp-767 {
-    padding: 30px 11px 11px 11px;
+    padding: 7px 11px;
   }
 
   &_logo {
@@ -47,13 +47,9 @@
 
 .headerPadding {
   width: 100%;
-  height: 85px;
+  height: 66px;
 
   @include vp-1439 {
-    height: 82px;
-  }
-
-  @include vp-767 {
-    height: 89px;
+    height: 60px;
   }
 }
