@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.41e54d0d.css",
+    "main.js": "/static/js/main.c8da2ed9.js",
+    "static/js/787.a7e853c5.chunk.js": "/static/js/787.a7e853c5.chunk.js",
+    "static/media/bg-casino-desktop.png": "/static/media/bg-casino-desktop.2dd4d4957266d251c3b8.png",
+    "static/media/PetrovSans-Trial-SemiBold.woff": "/static/media/PetrovSans-Trial-SemiBold.9410b85b91f0cbca75d8.woff",
+    "static/media/PetrovSans-Trial-Regular.woff": "/static/media/PetrovSans-Trial-Regular.fb4788ce91ce150fccb9.woff",
+    "static/media/PetrovSans-Trial-Bold.woff": "/static/media/PetrovSans-Trial-Bold.9b7a5eb418f193ec60f6.woff",
+    "static/media/PetrovSans-Trial-SemiBold.woff2": "/static/media/PetrovSans-Trial-SemiBold.b066d03e6def18b32536.woff2",
+    "static/media/PetrovSans-Trial-Regular.woff2": "/static/media/PetrovSans-Trial-Regular.790ae6c1623c889014d1.woff2",
+    "static/media/PetrovSans-Trial-Bold.woff2": "/static/media/PetrovSans-Trial-Bold.a2cca56cd584f53ec300.woff2",
+    "static/media/ellipse-bg.png": "/static/media/ellipse-bg.9211ff6ec4f96542d909.png",
+    "static/media/logo.svg": "/static/media/logo.2d2dc4a40ff22f519ba8272ffa65ba3e.svg",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.41e54d0d.css.map": "/static/css/main.41e54d0d.css.map",
+    "main.c8da2ed9.js.map": "/static/js/main.c8da2ed9.js.map",
+    "787.a7e853c5.chunk.js.map": "/static/js/787.a7e853c5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41e54d0d.css",
+    "static/js/main.c8da2ed9.js"
+  ]
+}
