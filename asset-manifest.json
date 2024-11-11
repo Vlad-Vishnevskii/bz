@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Vlad-Vishnevskii/bz/static/css/main.2cb4647a.css",
-    "main.js": "/Vlad-Vishnevskii/bz/static/js/main.dbd17a15.js",
-    "static/js/787.a7e853c5.chunk.js": "/Vlad-Vishnevskii/bz/static/js/787.a7e853c5.chunk.js",
-    "static/media/bg-casino-desktop.png": "/Vlad-Vishnevskii/bz/static/media/bg-casino-desktop.2dd4d4957266d251c3b8.png",
-    "static/media/PetrovSans-Trial-SemiBold.woff": "/Vlad-Vishnevskii/bz/static/media/PetrovSans-Trial-SemiBold.9410b85b91f0cbca75d8.woff",
-    "static/media/PetrovSans-Trial-Regular.woff": "/Vlad-Vishnevskii/bz/static/media/PetrovSans-Trial-Regular.fb4788ce91ce150fccb9.woff",
-    "static/media/PetrovSans-Trial-Bold.woff": "/Vlad-Vishnevskii/bz/static/media/PetrovSans-Trial-Bold.9b7a5eb418f193ec60f6.woff",
-    "static/media/PetrovSans-Trial-SemiBold.woff2": "/Vlad-Vishnevskii/bz/static/media/PetrovSans-Trial-SemiBold.b066d03e6def18b32536.woff2",
-    "static/media/PetrovSans-Trial-Regular.woff2": "/Vlad-Vishnevskii/bz/static/media/PetrovSans-Trial-Regular.790ae6c1623c889014d1.woff2",
-    "static/media/PetrovSans-Trial-Bold.woff2": "/Vlad-Vishnevskii/bz/static/media/PetrovSans-Trial-Bold.a2cca56cd584f53ec300.woff2",
-    "static/media/ellipse-bg.png": "/Vlad-Vishnevskii/bz/static/media/ellipse-bg.9211ff6ec4f96542d909.png",
-    "static/media/logo.svg": "/Vlad-Vishnevskii/bz/static/media/logo.2d2dc4a40ff22f519ba8272ffa65ba3e.svg",
-    "index.html": "/Vlad-Vishnevskii/bz/index.html",
-    "static/media/getFetch.cjs": "/Vlad-Vishnevskii/bz/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.2cb4647a.css.map": "/Vlad-Vishnevskii/bz/static/css/main.2cb4647a.css.map",
-    "main.dbd17a15.js.map": "/Vlad-Vishnevskii/bz/static/js/main.dbd17a15.js.map",
-    "787.a7e853c5.chunk.js.map": "/Vlad-Vishnevskii/bz/static/js/787.a7e853c5.chunk.js.map"
+    "main.css": "/github.io/bz/static/css/main.5bfb4b38.css",
+    "main.js": "/github.io/bz/static/js/main.da2746e5.js",
+    "static/js/787.a7e853c5.chunk.js": "/github.io/bz/static/js/787.a7e853c5.chunk.js",
+    "static/media/bg-casino-desktop.png": "/github.io/bz/static/media/bg-casino-desktop.2dd4d4957266d251c3b8.png",
+    "static/media/PetrovSans-Trial-SemiBold.woff": "/github.io/bz/static/media/PetrovSans-Trial-SemiBold.9410b85b91f0cbca75d8.woff",
+    "static/media/PetrovSans-Trial-Regular.woff": "/github.io/bz/static/media/PetrovSans-Trial-Regular.fb4788ce91ce150fccb9.woff",
+    "static/media/PetrovSans-Trial-Bold.woff": "/github.io/bz/static/media/PetrovSans-Trial-Bold.9b7a5eb418f193ec60f6.woff",
+    "static/media/PetrovSans-Trial-SemiBold.woff2": "/github.io/bz/static/media/PetrovSans-Trial-SemiBold.b066d03e6def18b32536.woff2",
+    "static/media/PetrovSans-Trial-Regular.woff2": "/github.io/bz/static/media/PetrovSans-Trial-Regular.790ae6c1623c889014d1.woff2",
+    "static/media/PetrovSans-Trial-Bold.woff2": "/github.io/bz/static/media/PetrovSans-Trial-Bold.a2cca56cd584f53ec300.woff2",
+    "static/media/ellipse-bg.png": "/github.io/bz/static/media/ellipse-bg.9211ff6ec4f96542d909.png",
+    "static/media/logo.svg": "/github.io/bz/static/media/logo.2d2dc4a40ff22f519ba8272ffa65ba3e.svg",
+    "index.html": "/github.io/bz/index.html",
+    "static/media/getFetch.cjs": "/github.io/bz/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.5bfb4b38.css.map": "/github.io/bz/static/css/main.5bfb4b38.css.map",
+    "main.da2746e5.js.map": "/github.io/bz/static/js/main.da2746e5.js.map",
+    "787.a7e853c5.chunk.js.map": "/github.io/bz/static/js/787.a7e853c5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2cb4647a.css",
-    "static/js/main.dbd17a15.js"
+    "static/css/main.5bfb4b38.css",
+    "static/js/main.da2746e5.js"
   ]
 }
