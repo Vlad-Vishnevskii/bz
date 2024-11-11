@@ -10,8 +10,12 @@ import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
-export const HeaderMenu = ({ isWhite }) => {
-  const [modalIsOpen, setIsOpen] = useBoolean(false);
+export const HeaderMenu = ({
+  isWhite,
+  setModalState,
+  modalIsOpen,
+  setIsOpen,
+}) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useBoolean(false);
   const { t } = useTranslation();
   const openModal = () => {
@@ -63,6 +67,7 @@ export const HeaderMenu = ({ isWhite }) => {
         type={'orderForm'}
         modalIsOpen={modalIsOpen}
         closeModal={setIsOpen.off}
+        setModalState={setModalState}
       />
     </>
   );

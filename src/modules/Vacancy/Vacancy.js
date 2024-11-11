@@ -4,7 +4,7 @@ import { AccordionList } from './AccordionList';
 
 import styles from './styles.module.scss';
 
-export const Vacancy = () => {
+export const Vacancy = ({ setModalState }) => {
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export const Vacancy = () => {
     <div className={styles.vacancy}>
       <h1 className={styles.vacancy_title}>{t('vacancy.title')}</h1>
       <p className={styles.vacancy_description}>{t('vacancy.description')}</p>
-      <AccordionList />
+      <AccordionList setModalState={setModalState} />
     </div>
   );
 };

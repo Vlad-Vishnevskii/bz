@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  nginx-proxy:
+    container_name: 'nginx-proxy'
+    build:
+      context: services/nginx/
+      dockerfile: nginx.Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - react
+    networks:
+      lvl-network:
+        ipv4_address: 172.20.10.10
+
+  react:
+    container_name: 'lvl_react_1'
+    depends_on:
+      - node
+      - mysql
+    build:
+      context: services/react/
+      dockerfile: react.Dockerfile
+    volumes:
+      - ${BASE_PATH}/build:/build
+    extra_hosts:
+      - host.docker.internal:host-gateway
+      - ${SITE_DOMAIN}:172.20.10.10
+    env_file:
+      - env.dev 
+    networks:
+      lvl-network:
+        ipv4_address: 172.20.10.10
+
+  networks:
+  lvl-network:
+    driver: bridge
+    name: "lvl-network"
+    ipam:
+      config:
+        - subnet: 172.20.10.0/24
+          gateway: 172.20.10.1

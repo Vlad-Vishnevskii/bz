@@ -1,0 +1,76 @@
+@import './variables.scss';
+
+.overlay {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(40, 45, 50, 0.5);
+  width: 100%;
+  height: 100%;
+  padding-top: 90px;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-bottom: 90px;
+  z-index: 7;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  @include vp-1023 {
+    position: fixed;
+    align-items: center;
+    padding: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.modal {
+  position: fixed;
+  background: #ffffff;
+  width: 100%;
+  height: auto;
+  max-width: 830px;
+  overflow: hidden;
+  overflow-y: auto;
+
+  @include vp-1023 {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.closeICon {
+  position: absolute;
+  top: 48px;
+  right: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: $trans-default;
+
+  @include vp-1023 {
+    right: 77px;
+  }
+
+  @include vp-767 {
+    right: 16px;
+    top: 22px;
+
+    svg {
+      width: 19px;
+      height: 19px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

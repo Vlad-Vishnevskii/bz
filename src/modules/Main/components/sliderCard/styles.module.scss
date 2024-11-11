@@ -53,6 +53,7 @@
     line-height: 140%;
     max-width: 1040px;
     width: 100%;
+    transition: $trans-default;
 
     @include vp-1439 {
       padding: 0 73px;
@@ -62,6 +63,20 @@
       margin-top: 17px;
       padding: 0 16px;
       font-size: 20px;
+    }
+
+    &_fade {
+      animation: fade 1.2s ease;
+
+      @keyframes fade {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
     }
   }
 }

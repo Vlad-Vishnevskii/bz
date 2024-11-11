@@ -7,12 +7,9 @@ import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
-export const Contacts = () => {
+export const Contacts = ({ setModalState }) => {
   const [modalIsOpen, setIsOpen] = useBoolean(false);
   const { t } = useTranslation();
-  const onSubmitForm = (e) => {
-    e.preventDefault();
-  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -39,21 +36,18 @@ export const Contacts = () => {
           <div className={styles.contacts_filed}>
             <p className={styles.contacts_label}>{t('contacts.phoneLabel')}</p>
             <div className={styles.contacts_phoneContainer}>
-              <a className={styles.contacts_value} href="tel:+375336670448">
-                +375 33 667 04 48
+              <a className={styles.contacts_value} href="tel:+375339900990">
+                +375 33 990 09 90
               </a>
-              <a className={styles.contacts_value} href="tel:+48571053900">
-                +48 571 053 900
+              <a className={styles.contacts_value} href="tel:+79203364985">
+                +7 920 336 49 85
               </a>
             </div>
           </div>
           <div className={styles.contacts_filed}>
-            <p className={styles.contacts_label}>Telegram</p>
-            <a
-              className={styles.contacts_value}
-              href="https://t.me/+48571053900"
-            >
-              +48 571 053 900
+            <p className={styles.contacts_label}>Telegram/WhatsApp/Viber</p>
+            <a className={styles.contacts_value} href="+375339900990">
+              +375 33 990 09 90
             </a>
           </div>
           <div className={styles.contacts_filed}>
@@ -62,11 +56,7 @@ export const Contacts = () => {
           </div>
         </div>
         <div className={styles.contacts_formWrapper}>
-          <OrderForm
-            type={'orderForm'}
-            forContactsFrame
-            closeModal={onSubmitForm}
-          />
+          <OrderForm type={'orderForm'} setModalState={setModalState} />
         </div>
       </div>
       <button
@@ -76,11 +66,11 @@ export const Contacts = () => {
       >
         {t('contacts.orderBtn')}
       </button>
-      <p className={styles.contacts_copyright}>{t('contacts.copyright')}</p>
       <ModalOrder
         type={'orderForm'}
         modalIsOpen={modalIsOpen}
         closeModal={setIsOpen.off}
+        setModalState={setModalState}
       />
     </div>
   );

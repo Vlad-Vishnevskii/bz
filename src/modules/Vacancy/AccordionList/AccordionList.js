@@ -13,7 +13,7 @@ import { ModalOrder } from '../../ModalOrder';
 
 import styles from './styles.module.scss';
 
-export const AccordionList = () => {
+export const AccordionList = ({ setModalState }) => {
   const { t } = useTranslation();
   const [modalIsOpen, setIsOpen] = useBoolean(false);
 
@@ -65,6 +65,7 @@ export const AccordionList = () => {
         type={'vacancyForm'}
         modalIsOpen={modalIsOpen}
         closeModal={setIsOpen.off}
+        setModalState={setModalState}
       />
     </Accordion>
   );

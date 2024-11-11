@@ -9,15 +9,15 @@ export const HEADER_MENU_ITEMS = [
     name: 'header.projects',
     href: '/projects',
   },
-  {
-    id: 2,
-    name: 'header.about',
-    href: '/about',
-  },
-  {
-    id: 3,
-    name: 'header.blog',
-  },
+  // {
+  //   id: 2,
+  //   name: 'header.about',
+  //   href: '/about',
+  // },
+  // {
+  //   id: 3,
+  //   name: 'header.blog',
+  // },
   {
     id: 4,
     name: 'header.vacancy',

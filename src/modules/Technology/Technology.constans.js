@@ -1,7 +1,7 @@
 export const BACKEND_TECHNOLOGY = [
   {
     id: 0,
-    name: 'PHP 7',
+    name: 'PHP',
     src: '/images/technology/php.png',
   },
   {
@@ -11,43 +11,43 @@ export const BACKEND_TECHNOLOGY = [
   },
   {
     id: 2,
-    name: 'Redis',
-    src: '/images/technology/redis.svg',
-  },
-  {
-    id: 3,
-    name: 'Sphinx',
-    src: '/images/technology/sphinx.svg',
-  },
-  {
-    id: 4,
-    name: 'MySQL',
-    src: '/images/technology/MySQL.svg',
-  },
-  {
-    id: 5,
-    name: 'Apache kafka',
-    src: '/images/technology/kafka.svg',
-  },
-  {
-    id: 6,
-    name: 'Golang',
-    src: '/images/technology/golang.svg',
-  },
-  {
-    id: 7,
-    name: 'Docker',
-    src: '/images/technology/docker.svg',
-  },
-  {
-    id: 8,
     name: 'Laravel',
     src: '/images/technology/laravel.svg',
   },
   {
-    id: 9,
+    id: 3,
     name: 'Symfony',
     src: '/images/technology/symfony.svg',
+  },
+  {
+    id: 4,
+    name: 'Redis',
+    src: '/images/technology/redis.svg',
+  },
+  {
+    id: 5,
+    name: 'Sphinx',
+    src: '/images/technology/sphinx.svg',
+  },
+  {
+    id: 6,
+    name: 'MySQL',
+    src: '/images/technology/MySQL.svg',
+  },
+  {
+    id: 7,
+    name: 'Apache kafka',
+    src: '/images/technology/kafka.svg',
+  },
+  {
+    id: 8,
+    name: 'Golang',
+    src: '/images/technology/golang.svg',
+  },
+  {
+    id: 9,
+    name: 'Docker',
+    src: '/images/technology/docker.svg',
   },
 ];
 

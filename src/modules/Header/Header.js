@@ -6,7 +6,7 @@ import { HeaderMenu } from './components';
 import { CASINO_BG_PAGE } from '../../AppContainer/AppContainer.constans';
 import styles from './styles.module.scss';
 
-export const Header = () => {
+export const Header = ({ setModalState, modalIsOpen, setIsOpen }) => {
   const { pathname } = useLocation();
   const isCasinoPage = pathname.includes(CASINO_BG_PAGE);
 
@@ -22,7 +22,11 @@ export const Header = () => {
           <Link className={styles.header_logo} to="/">
             <img src={logo} alt="BISONIX" />
           </Link>
-          <HeaderMenu />
+          <HeaderMenu
+            modalIsOpen={modalIsOpen}
+            setIsOpen={setIsOpen}
+            setModalState={setModalState}
+          />
         </header>
       </div>
     </>

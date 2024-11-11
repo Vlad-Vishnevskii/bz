@@ -9,7 +9,7 @@
 
 .footer {
   display: grid;
-  grid-template-columns: 1fr 140px 140px 140px;
+  grid-template-columns: 1fr repeat(3, minmax(140px, max-content));
   column-gap: 31px;
   grid-template-rows: auto auto;
   align-items: center;

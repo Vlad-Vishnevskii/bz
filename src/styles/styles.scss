@@ -8,12 +8,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
 .app {
   box-sizing: border-box;
   font-family: 'Petrov Sans-Trial';
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 
   *,
   *::before,

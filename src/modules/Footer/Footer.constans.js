@@ -1,1 +1,1 @@
-export const NO_FOOTER_ROUTES = ['contacts']
+export const NO_FOOTER_ROUTES = [];

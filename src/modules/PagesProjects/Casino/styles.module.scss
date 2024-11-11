@@ -1,0 +1,474 @@
+@import '../../../variables.scss';
+
+.casino {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  color: #ffffff;
+  padding-bottom: 10px;
+
+  @include vp-767 {
+    gap: 25px;
+    margin-bottom: -20px;
+  }
+
+  &_headerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: url('./assets/bg-casino-desktop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 297px;
+
+    @include vp-1023 {
+      min-height: 287px;
+    }
+  }
+
+  &_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1080px;
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 20px;
+
+    @media (max-width: 1150px) {
+      max-width: 820px;
+    }
+
+    @include vp-1023 {
+      padding: 0 30px;
+      max-width: 700px;
+    }
+
+    @include vp-767 {
+      padding: 0 16px;
+    }
+  }
+
+  &_label {
+    color: #eb7d14;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+
+    @include vp-1023 {
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
+
+    @include vp-767 {
+      margin-top: 4px;
+      font-size: 14px;
+    }
+  }
+
+  &_title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+    font-size: 60px;
+
+    @include vp-1919 {
+      font-size: 48px;
+    }
+
+    @include vp-1023 {
+      margin-top: 40px;
+      margin-bottom: 0;
+    }
+
+    @include vp-767 {
+      margin-top: 20px;
+      font-size: 32px;
+      text-align: center;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 25px;
+    }
+  }
+
+  &_description {
+    color: #ffffff;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 24px;
+
+    @include vp-1919 {
+      font-size: 18px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      margin-top: 23px;
+    }
+  }
+
+  &_container {
+    margin: 0 auto;
+    max-width: 1300px;
+
+    @include vp-1439 {
+      padding: 0 30px;
+      max-width: 100%;
+    }
+
+    @include vp-767 {
+      padding: 0 16px;
+    }
+  }
+
+  &_containerGrey {
+    width: 100%;
+    background: #fafafa;
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    @include vp-1023 {
+      padding-top: 13px;
+    }
+
+    @include vp-767 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    &_padding {
+      margin: 0 auto;
+      max-width: 1300px;
+      padding-top: 20px;
+
+      @include vp-1439 {
+        max-width: 820px;
+      }
+
+      @include vp-1023 {
+        max-width: 620px;
+      }
+
+      @include vp-767 {
+        max-width: 90%;
+      }
+    }
+  }
+
+  &_section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+
+    @include vp-1439 {
+      flex-direction: column-reverse;
+      max-width: 820px;
+    }
+
+    @include vp-1023 {
+      max-width: 620px;
+      gap: 30px;
+    }
+
+    @include vp-767 {
+      gap: 20px;
+    }
+
+    img {
+      @include vp-1439 {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &_1 {
+      padding-left: 33px;
+      margin-top: 20px;
+      gap: 35px;
+
+      @include vp-1439 {
+        flex-direction: column-reverse;
+        max-width: 820px;
+      }
+
+      @include vp-1023 {
+        margin-top: 0;
+        max-width: 620px;
+        padding-left: 0;
+      }
+
+      @include vp-767 {
+        gap: 20px;
+      }
+
+      .casino_textBlock h3 {
+        @include vp-1023 {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &_2 {
+      flex-direction: row-reverse;
+      margin: 0 auto;
+      max-width: 1300px;
+
+      .casino_textBlock h3 {
+        margin-top: 2px;
+      }
+
+      @include vp-1439 {
+        flex-direction: column-reverse;
+        max-width: 820px;
+      }
+
+      @include vp-1023 {
+        max-width: 620px;
+      }
+    }
+
+    &_3 {
+      margin-top: -29px;
+      margin-bottom: -14px;
+
+      img {
+        margin-left: -20px;
+
+        @include vp-767 {
+          margin-left: 0;
+          margin-top: -20px;
+        }
+      }
+
+      @include vp-1439 {
+        flex-direction: column-reverse;
+        max-width: 820px;
+      }
+
+      @include vp-1023 {
+        max-width: 620px;
+      }
+
+      @include vp-767 {
+        margin: 0;
+      }
+
+      .casino_textBlock h3 {
+        @include vp-1023 {
+          margin-top: 17px;
+        }
+
+        @include vp-767 {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &_4 {
+      flex-direction: row-reverse;
+      margin: 0 auto;
+      max-width: 1300px;
+      margin-top: -6px;
+
+      .casino_textBlock h3 {
+        margin-top: 2px;
+      }
+
+      @include vp-1439 {
+        flex-direction: column-reverse;
+        max-width: 820px;
+      }
+
+      @include vp-1023 {
+        max-width: 620px;
+      }
+    }
+
+    &_5 {
+      flex-direction: row-reverse;
+      padding: 20px 111px;
+
+      @include vp-1439 {
+        flex-direction: column-reverse;
+        padding: 20px 60px;
+      }
+
+      @include vp-1023 {
+        padding: 10px 40px;
+      }
+
+      @include vp-767 {
+        padding: 0;
+      }
+
+      .casino_textBlock h3 {
+        @include vp-1023 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &_textBlock {
+    color: #000000;
+
+    h3 {
+      margin-top: 45px;
+      margin-bottom: 20px;
+      color: #282d32;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: capitalize;
+
+      @include vp-767 {
+        font-size: 23px;
+        text-align: left;
+      }
+    }
+
+    article {
+      color: #4c5157;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+
+      @include vp-1023 {
+        font-size: 16px;
+      }
+
+      @include vp-767 {
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+  }
+
+  &_bottomTitle {
+    margin-top: 25px;
+    margin-bottom: 0;
+    color: #282d32;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    @include vp-1023 {
+      margin-top: 34px;
+    }
+
+    @include vp-767 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+  }
+
+  &_bottomDescription {
+    margin-top: 9px;
+    margin-bottom: 0;
+    max-width: 1080px;
+    color: #4c5157;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+
+    @include vp-1439 {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include vp-1023 {
+      max-width: 100%;
+      padding: 0 30px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      font-size: 13px;
+      line-height: 150%;
+    }
+  }
+
+  &_statistic {
+    display: grid;
+    grid-template-columns: repeat(3, 319px);
+    color: #000000;
+    gap: 62px;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 80px;
+
+    @include vp-1439 {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    @include vp-1023 {
+      margin-top: 44px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      margin-top: 47px;
+      gap: 12px;
+    }
+  }
+
+  &_statisticHeader {
+    color: #eb7d14;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
+
+  &_statisticBottom {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+    align-items: center;
+  }
+
+  &_statisticValue {
+    color: #282d32;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+  &_statisticBullet {
+    width: 8px;
+    height: 8px;
+    background: #eb7d14;
+    border-radius: 50%;
+  }
+}
+
+body .cs_btn {
+  margin-top: 100px;
+}

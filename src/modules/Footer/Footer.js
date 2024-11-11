@@ -34,15 +34,15 @@ export const Footer = () => {
         </a>
         <a
           className={cn(styles.footer_contact, styles.footer_contactPhone)}
-          href="tel:+48571053900"
+          href="tel:+375339900990"
         >
-          +48 571 053 900
+         +375 33 990 09 90
         </a>
         <a
           className={cn(styles.footer_contact, styles.footer_contactPhone)}
-          href="tel:+375336670448"
+          href="tel:+79203364985"
         >
-          +375 33 667 04 48
+          +7 920 336 49 85
         </a>
         <p className={styles.footer_copyright}>{t('contacts.copyright')}</p>
       </footer>

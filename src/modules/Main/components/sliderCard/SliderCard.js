@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import cn from 'classnames';
 import { useTranslation, Trans } from 'react-i18next';
 import TypeWriter from 'react-typewriter';
 
@@ -33,7 +34,7 @@ export const SliderCard = ({ id, description, title }) => {
   } = useTranslation();
   const [descriptionVisible, setDescriptionVisible] = useState(false);
   const typeWriterString = language === 'ru' ? ruTitle : enTitle;
-  const on = () => {
+  const onTypingFinished = () => {
     setDescriptionVisible(true);
   };
 
@@ -42,14 +43,16 @@ export const SliderCard = ({ id, description, title }) => {
       {id === 1 ? (
         <>
           <h2 className={styles.sliderCard_title}>
-            <TypeWriter typing={1} onTypingEnd={on}>
+            <TypeWriter typing={1} onTypingEnd={onTypingFinished}>
               {typeWriterString}
             </TypeWriter>
           </h2>
-          <p className={styles.sliderCard_description}>
-            {descriptionVisible && (
-              <TypeWriter typing={1}>{t(description)}</TypeWriter>
-            )}
+          <p
+            className={cn(styles.sliderCard_description, {
+              [styles.sliderCard_description_fade]: descriptionVisible,
+            })}
+          >
+            {descriptionVisible && t(description)}
           </p>
         </>
       ) : (

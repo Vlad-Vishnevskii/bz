@@ -2,14 +2,26 @@ import React, { useState } from 'react';
 import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
 import { NameInput, ContactInput, AboutInput } from './components';
+import { MODAL_STATE } from '../../constants';
 
 import styles from './styles.module.scss';
 
-export const OrderForm = ({ closeModal, type, forContactsFrame }) => {
+const createSearchParams = (obj) => {
+  return `?${Object.entries(obj)
+    .map(([key, value]) => `${key}=${value}`)
+    .join('&')}`;
+};
+
+export const OrderForm = ({
+  type,
+  forContactsFrame = false,
+  setModalState,
+  closeModal = () => {},
+}) => {
   const { t } = useTranslation();
   const [stateForm, setStateForm] = useState({
     name: '',
-    conctact: '',
+    contact: '',
     about: '',
   });
 
@@ -23,7 +35,7 @@ export const OrderForm = ({ closeModal, type, forContactsFrame }) => {
   const onContactChange = (value) => {
     setStateForm((prev) => ({
       ...prev,
-      conctact: value,
+      contact: value,
     }));
   };
 
@@ -34,9 +46,48 @@ export const OrderForm = ({ closeModal, type, forContactsFrame }) => {
     }));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('lod', () => {
+      console.log(xhr.responseText);
+    });
+
+    xhr.open(
+      'GET',
+      `${window.location.origin}/mail.php${createSearchParams(stateForm)}`
+    );
+
+    xhr.send();
+
+    xhr.onerror = function () {
+      setModalState({
+        isOpen: true,
+        type: MODAL_STATE.ERROR,
+      });
+    };
+
+    xhr.onload = function () {
+      if (xhr.status === 200 || xhr.status === 302) {
+        setModalState({
+          isOpen: true,
+          type: MODAL_STATE.SUCCESS,
+        });
+      } else {
+        setModalState({
+          isOpen: true,
+          type: MODAL_STATE.ERROR,
+        });
+      }
+      closeModal();
+    };
+  };
+
   return (
     <form
-      onSubmit={closeModal}
+      onSubmit={handleSubmit}
       className={cn(styles.orderForm, {
         [styles.orderFormForContactFrame]: forContactsFrame,
       })}
@@ -57,7 +108,7 @@ export const OrderForm = ({ closeModal, type, forContactsFrame }) => {
         placeholderText={t(`${type}.placeholderName`)}
       />
       <ContactInput
-        value={stateForm.conctact}
+        value={stateForm.contact}
         change={onContactChange}
         placeholderText={t(`${type}.placeholderContact`)}
       />

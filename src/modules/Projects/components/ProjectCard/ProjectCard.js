@@ -11,10 +11,12 @@ export const ProjectCard = ({
   type,
   title,
   imgPath,
-  imgPathTablet,
-  imgPathMobile,
+  logo = '',
   description,
   href,
+  width = '',
+  height = '',
+  isPngLogo = false,
 }) => {
   const { t } = useTranslation();
 
@@ -26,14 +28,21 @@ export const ProjectCard = ({
           type === PROJECT_CARD_TYPES.longReverse,
       })}
     >
-      <picture>
-        <source srcSet={imgPathMobile} media="(max-width: 500px)" />
-        <source srcSet={imgPathTablet} media="(max-width: 1350px)" />
-        <img src={imgPath} alt={t(title)} />
-      </picture>
+      <div className={styles.projectCard_bg}>
+        <img className={styles.projectCard_imgBg} src={imgPath} />
+        {logo && (
+          <img
+            src={logo}
+            width={width}
+            height={height}
+            className={styles.projectCard_imgLogo}
+          />
+        )}
+      </div>
       <div className={styles.projectCard_textContainer}>
-        {/* <p className={styles.projectCard_label}>{t('projects.title')}</p> */}
-        <h3 className={styles.projectCard_title}>{t(title)}</h3>
+        <h3 className={styles.projectCard_title}>
+          <Link to={href}>{t(title)}</Link>
+        </h3>
         <p className={styles.projectCard_description}>{t(description)}</p>
         <Link className={styles.projectCard_link} to={href}>
           <span>{t('projects.more_btn')}</span>

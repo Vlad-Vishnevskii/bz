@@ -15,20 +15,33 @@ const handleEnableBodyScroll = () => {
   document.body.style.position = 'auto';
 };
 
-export const ModalOrder = ({ modalIsOpen, closeModal, type }) => {
+export const ModalOrder = ({
+  modalIsOpen,
+  closeModal,
+  type,
+  setModalState,
+}) => {
+  const handleClose = () => {
+    closeModal();
+  };
+
   return (
     <ModalContainer
       isOpen={modalIsOpen}
-      onRequestClose={closeModal}
+      onRequestClose={handleClose}
       onAfterOpen={handleDisableBodyScroll}
       onAfterClose={handleEnableBodyScroll}
       className={styles.modal}
       overlayClassName={styles.overlay}
     >
-      <button className={styles.closeICon} onClick={closeModal}>
+      <button className={styles.closeICon} onClick={handleClose}>
         <CloseIcon />
       </button>
-      <OrderForm closeModal={closeModal} type={type} />
+      <OrderForm
+        closeModal={handleClose}
+        type={type}
+        setModalState={setModalState}
+      />
     </ModalContainer>
   );
 };

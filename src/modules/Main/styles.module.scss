@@ -1,9 +1,18 @@
 @import '../../variables.scss';
 
 .main {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-40%);
   min-height: 685px;
   padding-top: 75px;
   width: 100%;
+
+  @media (max-width: 2200px) {
+    position: initial;
+    transform: none;
+    top: initial;
+  }
 
   @include vp-1439 {
     padding-top: 70px;
