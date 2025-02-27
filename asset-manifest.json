@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Vlad-Vishnevskii/bz/static/css/main.2cb4647a.css",
-    "main.js": "/Vlad-Vishnevskii/bz/static/js/main.c503dac9.js",
+    "main.js": "/Vlad-Vishnevskii/bz/static/js/main.5dcc7ca7.js",
     "static/js/787.a7e853c5.chunk.js": "/Vlad-Vishnevskii/bz/static/js/787.a7e853c5.chunk.js",
     "static/media/bg-casino-desktop.png": "/Vlad-Vishnevskii/bz/static/media/bg-casino-desktop.2dd4d4957266d251c3b8.png",
     "static/media/PetrovSans-Trial-SemiBold.woff": "/Vlad-Vishnevskii/bz/static/media/PetrovSans-Trial-SemiBold.9410b85b91f0cbca75d8.woff",
@@ -15,11 +15,11 @@
     "index.html": "/Vlad-Vishnevskii/bz/index.html",
     "static/media/getFetch.cjs": "/Vlad-Vishnevskii/bz/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.2cb4647a.css.map": "/Vlad-Vishnevskii/bz/static/css/main.2cb4647a.css.map",
-    "main.c503dac9.js.map": "/Vlad-Vishnevskii/bz/static/js/main.c503dac9.js.map",
+    "main.5dcc7ca7.js.map": "/Vlad-Vishnevskii/bz/static/js/main.5dcc7ca7.js.map",
     "787.a7e853c5.chunk.js.map": "/Vlad-Vishnevskii/bz/static/js/787.a7e853c5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2cb4647a.css",
-    "static/js/main.c503dac9.js"
+    "static/js/main.5dcc7ca7.js"
   ]
 }
