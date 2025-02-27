@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div className="app">
-      <Router>
+      <Router basename="/bz">
         <AppContainer>
           <Header
             modalIsOpen={modalIsOpen}

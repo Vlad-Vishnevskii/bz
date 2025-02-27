@@ -1,7 +1,7 @@
 export const TEAM_LIST = [
   {
     id: 0,
-    photo: '/images/about/avatar.png',
+    photo: `${process.env.PUBLIC_URL}/images/about/avatar.png`,
     name: 'Дмитрий Шаринский',
     post: 'CEO',
     description:
@@ -9,7 +9,7 @@ export const TEAM_LIST = [
   },
   {
     id: 1,
-    photo: '/images/about/avatar.png',
+    photo: `${process.env.PUBLIC_URL}/images/about/avatar.png`,
     name: 'Дмитрий Шаринский',
     post: 'CEO',
     description:
@@ -17,7 +17,7 @@ export const TEAM_LIST = [
   },
   {
     id: 2,
-    photo: '/images/about/avatar.png',
+    photo: `${process.env.PUBLIC_URL}/images/about/avatar.png`,
     name: 'Дмитрий Шаринский',
     post: 'CEO',
     description:
@@ -25,7 +25,7 @@ export const TEAM_LIST = [
   },
   {
     id: 3,
-    photo: '/images/about/avatar.png',
+    photo: `${process.env.PUBLIC_URL}/images/about/avatar.png`,
     name: 'Дмитрий Шаринский',
     post: 'CEO',
     description:
@@ -33,7 +33,7 @@ export const TEAM_LIST = [
   },
   {
     id: 4,
-    photo: '/images/about/avatar.png',
+    photo: `${process.env.PUBLIC_URL}/images/about/avatar.png`,
     name: 'Дмитрий Шаринский',
     post: 'CEO',
     description:

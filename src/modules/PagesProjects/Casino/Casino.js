@@ -24,7 +24,7 @@ export const Casino = () => {
       <div className={styles.casino_container}>
         <div className={cn(styles.casino_section, styles.casino_section_1)}>
           <img
-            src="/images/casino/screen-1.png"
+            src={`${process.env.PUBLIC_URL}/images/casino/screen-1.png`}
             alt="Управление казино-контентом"
           />
           <div className={styles.casino_textBlock}>
@@ -41,7 +41,10 @@ export const Casino = () => {
       <ProviderSlider />
       <div className={styles.casino_containerGrey}>
         <div className={cn(styles.casino_section, styles.casino_section_2)}>
-          <img src="/images/casino/screen-2.png" alt="Ставки на спорт" />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/casino/screen-2.png`}
+            alt="Ставки на спорт"
+          />
           <div className={styles.casino_textBlock}>
             <h3>{t('casino.screen2.title')}</h3>
             <article>
@@ -55,7 +58,10 @@ export const Casino = () => {
       </div>
       <div className={styles.casino_container}>
         <div className={cn(styles.casino_section, styles.casino_section_3)}>
-          <img src="/images/casino/screen-3.png" alt="Финансовые операции" />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/casino/screen-3.png`}
+            alt="Финансовые операции"
+          />
           <div className={styles.casino_textBlock}>
             <h3>{t('casino.screen3.title')}</h3>
             <article>
@@ -70,7 +76,7 @@ export const Casino = () => {
       <div className={styles.casino_containerGrey}>
         <div className={cn(styles.casino_section, styles.casino_section_4)}>
           <img
-            src="/images/casino/screen-4.png"
+            src={`${process.env.PUBLIC_URL}/images/casino/screen-4.png`}
             alt="Управление бонусными механиками"
           />
           <div className={styles.casino_textBlock}>
@@ -92,7 +98,7 @@ export const Casino = () => {
       >
         <div className={cn(styles.casino_section, styles.casino_section_5)}>
           <img
-            src="/images/casino/screen-5.png"
+            src={`${process.env.PUBLIC_URL}/images/casino/screen-5.png`}
             alt="Управление бонусными механиками"
             width={532}
             height={282}
@@ -151,7 +157,7 @@ export const Casino = () => {
           </div>
         </div>
         <div className={styles.cs_btn}>
-          <ProjectButtons leftDisabled rightHref="/projects/bison" />
+          <ProjectButtons leftDisabled rightHref="" />
         </div>
       </div>
     </div>
